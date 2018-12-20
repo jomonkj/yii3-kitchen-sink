@@ -81,6 +81,7 @@
             "common": "config/common.php",
             "params": "config/params.php",
             "web": "config/web.php",
+            "console": "config/console.php",
             "dotenv": ".env"
         }
     },
