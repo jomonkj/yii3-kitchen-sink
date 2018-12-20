@@ -16,6 +16,7 @@ $this
 <html lang="en">
 <head>
     <title><?= $this->title ?: 'Yii 3 Kitchen Sink' ?></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php $this->head() ?>
 </head>
 <body>

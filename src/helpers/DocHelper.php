@@ -6,6 +6,7 @@ use yii\helpers\Yii;
 use yii\exceptions\InvalidConfigException;
 use yii\helpers\Html;
 use yii\helpers\Url;
+use League\CommonMark\CommonMarkConverter;
 
 class DocHelper
 {
@@ -31,8 +32,9 @@ class DocHelper
 
     private static function renderFile($path)
     {
-        $parser = new \cebe\markdown\Markdown();
-        $html = $parser->parse(file_get_contents($path));
+        $converter = new CommonMarkConverter();
+        $html = $converter->convertToHtml(file_get_contents($path));
+
         $html = preg_replace_callback('!<a href="([^"]+).md"!', function($match) {
              return isset(self::$redirections[$match[1]]) ? '<a href="' . Url::to(self::$redirections[$match[1]]) . '"' : $match[0];
         }, $html);

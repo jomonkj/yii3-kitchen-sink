@@ -1850,6 +1850,12 @@ blockquote {
   margin: 0;
   padding: .2em .4em;
 }
+.md summary {
+  cursor: pointer;
+}
+.md summary::-webkit-details-marker {
+  color: #ec3b3b;
+}
 /* Errors */
 .exception {
   font-family: Consolas, Courier, monospace;

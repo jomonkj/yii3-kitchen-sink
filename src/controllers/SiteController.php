@@ -37,7 +37,7 @@ class SiteController extends Controller
         return $this->render('doc', [
             'document' => '3-Packages',
             'title' => 'New composer packages',
-            'subTitle' => 'How was Yii 2 was split into several packages',
+            'subTitle' => 'How was Yii 2 split into several packages',
         ]);
     }
 

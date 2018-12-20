@@ -4,67 +4,76 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3d4a50bc807c976fc325ce6b2228af99",
+    "content-hash": "ce935cb4d4bc9273c3ff50c5a3b3aacd",
     "packages": [
         {
-            "name": "cebe/markdown",
+            "name": "league/commonmark",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/cebe/markdown.git",
-                "reference": "eeb1bf622e80f337479e00a5db94c56e7cf1326b"
+                "url": "https://github.com/thephpleague/commonmark.git",
+                "reference": "96601c9a1f05f603f22c93a7bc3ec578aea870f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cebe/markdown/zipball/eeb1bf622e80f337479e00a5db94c56e7cf1326b",
-                "reference": "eeb1bf622e80f337479e00a5db94c56e7cf1326b",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/96601c9a1f05f603f22c93a7bc3ec578aea870f3",
+                "reference": "96601c9a1f05f603f22c93a7bc3ec578aea870f3",
                 "shasum": ""
             },
             "require": {
-                "lib-pcre": "*",
-                "php": ">=5.4.0"
+                "ext-mbstring": "*",
+                "php": ">=5.6.5"
+            },
+            "replace": {
+                "colinodell/commonmark-php": "*"
             },
             "require-dev": {
-                "cebe/indent": "*",
-                "facebook/xhprof": "*@dev",
-                "phpunit/phpunit": "4.1.*"
+                "cebe/markdown": "~1.0",
+                "commonmark/commonmark.js": "0.28",
+                "erusev/parsedown": "~1.0",
+                "michelf/php-markdown": "~1.4",
+                "mikehaertl/php-shellcommand": "^1.2",
+                "phpunit/phpunit": "^5.7|^6.5",
+                "scrutinizer/ocular": "^1.1",
+                "symfony/finder": "^3.0|^4.0"
+            },
+            "suggest": {
+                "league/commonmark-extras": "Library of useful extensions including smart punctuation"
             },
             "bin": [
-                "bin/markdown"
+                "bin/commonmark"
             ],
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2.x-dev"
+                    "dev-master": "0.19-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "cebe\\markdown\\": ""
+                    "League\\CommonMark\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "BSD-3-Clause"
             ],
             "authors": [
                 {
-                    "name": "Carsten Brandt",
-                    "email": "mail@cebe.cc",
-                    "homepage": "http://cebe.cc/",
-                    "role": "Creator"
+                    "name": "Colin O'Dell",
+                    "email": "colinodell@gmail.com",
+                    "homepage": "https://www.colinodell.com",
+                    "role": "Lead Developer"
                 }
             ],
-            "description": "A super fast, highly extensible markdown parser for PHP",
-            "homepage": "https://github.com/cebe/markdown#readme",
+            "description": "PHP Markdown parser based on the CommonMark spec",
+            "homepage": "https://github.com/thephpleague/commonmark",
             "keywords": [
-                "extensible",
-                "fast",
-                "gfm",
+                "commonmark",
                 "markdown",
-                "markdown-extra"
+                "parser"
             ],
-            "time": "2018-12-10T09:41:35+00:00"
+            "time": "2018-12-08T14:35:57+00:00"
         },
         {
             "name": "psr/container",
@@ -1425,6 +1434,7 @@
         "symfony/var-dumper": 20,
         "vlucas/phpdotenv": 20,
         "yiisoft/yii-dataview": 20,
+        "league/commonmark": 20,
         "hiqdev/composer-config-plugin": 20
     },
     "prefer-stable": false,
