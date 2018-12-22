@@ -9,7 +9,8 @@ Starting with 3.0, [Yii will follow the Semantic Versioning](https://www.yiifram
 
 ## Changes Overview
 
-Here are the main changes in Yii 3. You can check the complete [CHANGELOG](https://github.com/yiisoft/yii-core/blob/master/CHANGELOG.md#300-under-development) for an exhaustive list.
+Here are the main changes in Yii 3. You can check the complete [CHANGELOG](https://github.com/yiisoft/yii-core/blob/master/CHANGELOG.md#300-under-development)
+and the [UPGRADE](https://github.com/yiisoft/yii-core/blob/master/UPGRADE.md) guide for an exhaustive list.
 
 
 ### **Source Code Splitting**
