@@ -1897,4 +1897,7 @@ pre.sf-dump {
   text-align: center;
   padding-bottom: 1em;
 }
+ul.pagination li {
+  display: inline-block;
+}
 /*# sourceMappingURL=site.css.map */

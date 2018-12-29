@@ -45,6 +45,7 @@ $this
                     ['label' => 'Introduction', 'url' => ['site/intro']],
                     ['label' => 'Configuration', 'url' => ['site/config']],
                     ['label' => 'Composer packages', 'url' => ['site/packages']],
+                    // Tests
                     ['label' => 'yiisoft/yii-dataview', 'url' => ['data-view/index']]
                 ],
             ]); ?>
