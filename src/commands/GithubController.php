@@ -69,9 +69,11 @@ class GithubController extends Controller
 
             $json = json_decode(file_get_contents($package . '/composer.json'), true);
 
-            foreach ($json['require'] as $req => $version) {
-                if (strpos($req, 'yiisoft/') === 0) {
-                    $all[$package][] = $req;
+            if (isset($json['require'])) {
+                foreach ($json['require'] as $req => $version) {
+                    if (strpos($req, 'yiisoft/') === 0) {
+                        $all[$package][] = str_replace('yiisoft/', '', $req);
+                    }
                 }
             }
         }
@@ -91,6 +93,13 @@ class GithubController extends Controller
 
 
         $graph = new \Fhaculty\Graph\Graph();
+        $graph->setAttribute('graphviz.graph.ratio', 0.3);
+        $graph->setAttribute('graphviz.edge.color', '#444444');
+        $graph->setAttribute('graphviz.node.shape', 'plaintext');
+        $graph->setAttribute('graphviz.node.color', 'none');
+        $graph->setAttribute('graphviz.node.fontsize', 39);
+        $graph->setAttribute('graphviz.graph.nodesep', 0.5);
+        $graph->setAttribute('graphviz.graph.ranksep', 0.5);
 
         foreach ($dependencies as $package => $deps) {
             $objects[$package] = $graph->createVertex($package);

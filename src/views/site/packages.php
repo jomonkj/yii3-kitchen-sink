@@ -24,7 +24,7 @@ $this->subTitle = $subTitle;
 <?php foreach ($packages as $package => $infos): ?>
     <div class="item">
         <?= $package ?><br />
-        <?= Html::o('mark-github') ?><br />
+        <?= Html::a(Html::o('mark-github'), 'https://github.com/yiisoft/' . $package) ?><br />
         <a href="https://travis-ci.<?= $infos['travis'] ?>/yiisoft/<?= $package ?>">
             <img src="https://travis-ci.<?= $infos['travis'] ?>/yiisoft/<?= $package ?>.svg?branch=master" />
         </a>
@@ -41,6 +41,6 @@ $this->subTitle = $subTitle;
 
 
 <figure>
-    <img src="/img/dependency-graph.png" alt="Yii 3 dependency graph" />
+    <a href="/img/dependency-graph.png" target="_blank"><img style="max-width: 100%;" src="/img/dependency-graph.png" alt="Yii 3 dependency graph" /></a>
     <figcaption>generated using <a href="https://github.com/graphp/graphviz">graphp/graphviz</figcaption>.
 </figure>

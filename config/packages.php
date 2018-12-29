@@ -113,10 +113,6 @@ return [
         'id' => 'yii-debug',
         'travis' => 'org',        
     ],
-    'yii-dev' => [
-        'id' => 'yii-dev',
-        'travis' => 'com',        
-    ],
     'yii-gii' => [
         'id' => 'yii-gii',
         'travis' => 'org',        
