@@ -1,8 +1,14 @@
 @import (less) "../../node_modules/purecss/build/pure.css";
+@import (less) "../../node_modules/octicons/build/build.css";
 @import "_layout.less";
 @import "_tabs.less";
 
 @primary-color: #ec3b3b;
+
+@sm: ~"screen and (min-width: 576px)";
+@md: ~"screen and (min-width: 768px)";
+@lg: ~"screen and (min-width: 992px)";
+@xl: ~"screen and (min-width: 1200px)";
 
 body {
     color: #777;
@@ -53,4 +59,24 @@ blockquote {
 
 pre.sf-dump {
     white-space: pre!important;
+}
+
+/** Packages **/
+
+.packages {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    @media @sm {
+        grid-template-columns: repeat(3, auto);
+    }
+    @media @md {
+        grid-template-columns: repeat(4, auto);
+    }
+    @media @lg {
+        grid-template-columns: repeat(5, auto);
+    }
+    .item {
+        text-align: center;
+        padding-bottom: 1em;
+    }
 }

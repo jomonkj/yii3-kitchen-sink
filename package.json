@@ -4,6 +4,7 @@
   "description": "Yii 3 kitchen sink",
   "main": "index.js",
   "dependencies": {
+    "octicons": "^8.2.0",
     "purecss": "^1.0.0"
   },
   "devDependencies": {},

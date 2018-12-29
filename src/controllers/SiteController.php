@@ -34,10 +34,13 @@ class SiteController extends Controller
 
     public function actionPackages()
     {
-        return $this->render('doc', [
-            'document' => '3-Packages',
+
+        $packages = $this->app->params['packages'];
+
+        return $this->render('packages', [
             'title' => 'New composer packages',
             'subTitle' => 'How was Yii 2 split into several packages',
+            'packages' => $packages,
         ]);
     }
 

@@ -1329,6 +1329,11 @@ striping:
 .pure-table-horizontal tbody > tr:last-child > td {
   border-bottom-width: 0;
 }
+.octicon {
+  display: inline-block;
+  vertical-align: text-top;
+  fill: currentColor;
+}
 .pure-img-responsive {
   max-width: 100%;
   height: auto;
@@ -1867,5 +1872,29 @@ blockquote {
 }
 pre.sf-dump {
   white-space: pre!important;
+}
+/** Packages **/
+.packages {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+}
+@media screen and (min-width: 576px) {
+  .packages {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+@media screen and (min-width: 768px) {
+  .packages {
+    grid-template-columns: repeat(4, auto);
+  }
+}
+@media screen and (min-width: 992px) {
+  .packages {
+    grid-template-columns: repeat(5, auto);
+  }
+}
+.packages .item {
+  text-align: center;
+  padding-bottom: 1em;
 }
 /*# sourceMappingURL=site.css.map */
