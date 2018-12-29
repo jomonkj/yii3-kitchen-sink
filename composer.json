@@ -69,7 +69,8 @@
         "vlucas/phpdotenv": "^2.5@dev",
         "yiisoft/yii-dataview": "^3.0@dev",
         "league/commonmark": "^0.19.0@dev",
-        "ezyang/htmlpurifier": "~4.6"
+        "ezyang/htmlpurifier": "~4.6",
+        "graphp/graphviz": "dev-master"
     },
     "require-dev": {
         "hiqdev/composer-config-plugin": "^1.0@dev"

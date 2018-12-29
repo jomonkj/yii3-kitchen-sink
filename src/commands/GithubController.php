@@ -25,14 +25,11 @@ class GithubController extends Controller
     }
 
     /**
-     * Clones the given repositories if they don't already exist
-     * 
+     * Clones all repositories. Use it once.
      */
-    public function actionClone(array $packages = [])
+    public function actionClone()
     {
-        if (empty($packages)) {
-            $packages = array_keys($this->app->params['packages']);
-        }
+        $packages = array_keys($this->app->params['packages']);
 
         foreach ($packages as $package) {
             if (is_dir($this->workDir . '/' . $package)) {
@@ -60,6 +57,59 @@ class GithubController extends Controller
         }
 
         return ExitCode::OK;
+    }
+
+    private function buildDependencies()
+    {
+        $all = [];
+
+        foreach (glob($this->workDir . '/*') as $packagePath) {
+            $package = basename($packagePath);
+            $all[$package] = [];
+
+            $json = json_decode(file_get_contents($package . '/composer.json'), true);
+
+            foreach ($json['require'] as $req => $version) {
+                if (strpos($req, 'yiisoft/') === 0) {
+                    $all[$package][] = $req;
+                }
+            }
+        }
+
+        return $all;
+    }
+
+    /**
+     * Generates the packages dependencies graphs
+     * 
+     * @param string $destination The final PNG file path 
+     */
+    public function actionGraph($destination)
+    {
+        $dependencies = $this->buildDependencies();
+        $objects = [];
+
+
+        $graph = new \Fhaculty\Graph\Graph();
+
+        foreach ($dependencies as $package => $deps) {
+            $objects[$package] = $graph->createVertex($package);
+        }
+
+        foreach ($dependencies as $package => $deps) {
+            foreach ($deps as $dep) {
+                if (isset($objects[$dep])) {
+                    $objects[$package]->createEdgeTo($objects[$dep]);
+                }
+            }
+        }
+
+        $graphviz = new \Graphp\GraphViz\GraphViz();
+        $tmp = $graphviz->createImageFile($graph);
+
+        chdir(Yii::getAlias('@app'));
+        echo getcwd();
+        copy($tmp, $destination);
     }
 
     private function git($command)
