@@ -30,14 +30,16 @@ class PackagesController extends Controller
             if (isset($json['require'])) {
                 foreach ($json['require'] as $req => $version) {
                     if (strpos($req, 'yiisoft/') === 0) {
-                        $all[] = ['source' => $package, 'target' => str_replace('yiisoft/', '', $req), 'type' => 'require'];
+                        $target = str_replace('yiisoft/', '', $req);
+                        // if ($target === 'core') $target = 'yii-core'; // TODO: fix this in packages
+                        $all[] = ['source' => $package, 'target' => $target, 'type' => 'require'];
                     }
                 }
             }
             if (isset($json['require-dev'])) {
                 foreach ($json['require-dev'] as $req => $version) {
                     if (strpos($req, 'yiisoft/') === 0) {
-                        $all[] = ['source' => $package, 'target' => str_replace('yiisoft/', '', $req), 'type' => 'require-dev'];
+                       // $all[] = ['source' => $package, 'target' => str_replace('yiisoft/', '', $req), 'type' => 'require-dev'];
                     }
                 }
             }

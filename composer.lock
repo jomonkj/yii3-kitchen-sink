@@ -1,56 +1,11 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e0f290a1b92fcf79ec991a7339bf8ff6",
+    "content-hash": "84ca9cfafda408bb12c63378f2dc3709",
     "packages": [
-        {
-            "name": "clue/graph",
-            "version": "v0.9.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/clue/graph.git",
-                "reference": "0336a4d5229fa61a20ccceaeab25e52ac9542700"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/clue/graph/zipball/0336a4d5229fa61a20ccceaeab25e52ac9542700",
-                "reference": "0336a4d5229fa61a20ccceaeab25e52ac9542700",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0"
-            },
-            "suggest": {
-                "graphp/algorithms": "Common graph algorithms, such as Dijkstra and Moore-Bellman-Ford (shortest path), minimum spanning tree (MST), Kruskal, Prim and many more..",
-                "graphp/graphviz": "GraphViz graph drawing / DOT output"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Fhaculty\\Graph\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "A mathematical graph/network library written in PHP",
-            "homepage": "https://github.com/clue/graph",
-            "keywords": [
-                "edge",
-                "graph",
-                "mathematical",
-                "network",
-                "vertex"
-            ],
-            "time": "2015-03-07T18:11:31+00:00"
-        },
         {
             "name": "ezyang/htmlpurifier",
             "version": "v4.10.0",
@@ -99,109 +54,17 @@
             "time": "2018-02-23T01:58:20+00:00"
         },
         {
-            "name": "graphp/algorithms",
-            "version": "v0.8.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/graphp/algorithms.git",
-                "reference": "81db4049c35730767ec8f97fb5c4844234b86cef"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/graphp/algorithms/zipball/81db4049c35730767ec8f97fb5c4844234b86cef",
-                "reference": "81db4049c35730767ec8f97fb5c4844234b86cef",
-                "shasum": ""
-            },
-            "require": {
-                "clue/graph": "~0.9.0|~0.8.0",
-                "php": ">=5.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Graphp\\Algorithms\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Christian Lück",
-                    "email": "christian@lueck.tv"
-                }
-            ],
-            "description": "Common mathematical graph algorithms",
-            "homepage": "https://github.com/graphp/algorithms",
-            "keywords": [
-                "Graph algorithms",
-                "dijkstra",
-                "kruskal",
-                "minimum spanning tree",
-                "moore-bellman-ford",
-                "prim",
-                "shortest path"
-            ],
-            "time": "2015-03-08T10:12:01+00:00"
-        },
-        {
-            "name": "graphp/graphviz",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/graphp/graphviz.git",
-                "reference": "80e5b2639411b8a709c8eebf294eec0c495a01bb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/graphp/graphviz/zipball/80e5b2639411b8a709c8eebf294eec0c495a01bb",
-                "reference": "80e5b2639411b8a709c8eebf294eec0c495a01bb",
-                "shasum": ""
-            },
-            "require": {
-                "clue/graph": "~0.9.0|~0.8.0",
-                "graphp/algorithms": "~0.8.0",
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^6.4 || ^5.7 || ^4.8.35"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Graphp\\GraphViz\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "GraphViz graph drawing for mathematical graph/network",
-            "homepage": "https://github.com/graphp/graphviz",
-            "keywords": [
-                "dot output",
-                "graph drawing",
-                "graph image",
-                "graphviz"
-            ],
-            "time": "2018-10-09T13:43:49+00:00"
-        },
-        {
             "name": "league/commonmark",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "96601c9a1f05f603f22c93a7bc3ec578aea870f3"
+                "reference": "2a5a29d0cfc2c335fa3e71c43730f9f0c0032a31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/96601c9a1f05f603f22c93a7bc3ec578aea870f3",
-                "reference": "96601c9a1f05f603f22c93a7bc3ec578aea870f3",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/2a5a29d0cfc2c335fa3e71c43730f9f0c0032a31",
+                "reference": "2a5a29d0cfc2c335fa3e71c43730f9f0c0032a31",
                 "shasum": ""
             },
             "require": {
@@ -257,7 +120,7 @@
                 "markdown",
                 "parser"
             ],
-            "time": "2018-12-08T14:35:57+00:00"
+            "time": "2018-12-30T11:44:22+00:00"
         },
         {
             "name": "psr/container",
@@ -573,12 +436,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "d571be7971d329837f6392d9e8207b40b36d5606"
+                "reference": "a3c5a492fa136242434d30b96eba7b053c62282a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/d571be7971d329837f6392d9e8207b40b36d5606",
-                "reference": "d571be7971d329837f6392d9e8207b40b36d5606",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/a3c5a492fa136242434d30b96eba7b053c62282a",
+                "reference": "a3c5a492fa136242434d30b96eba7b053c62282a",
                 "shasum": ""
             },
             "require": {
@@ -641,7 +504,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2018-12-24T13:39:10+00:00"
+            "time": "2018-12-24T13:40:20+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -1192,12 +1055,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii-core.git",
-                "reference": "d87cecdb27b21773e75c08137fe644114823f8d8"
+                "reference": "10650bbafe36d7eadc8bcfe7edca3f983dd7ff54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii-core/zipball/d87cecdb27b21773e75c08137fe644114823f8d8",
-                "reference": "d87cecdb27b21773e75c08137fe644114823f8d8",
+                "url": "https://api.github.com/repos/yiisoft/yii-core/zipball/10650bbafe36d7eadc8bcfe7edca3f983dd7ff54",
+                "reference": "10650bbafe36d7eadc8bcfe7edca3f983dd7ff54",
                 "shasum": ""
             },
             "require": {
@@ -1220,9 +1083,11 @@
                 "yiisoft/active-record": "^3.0@dev",
                 "yiisoft/cache": "^3.0@dev",
                 "yiisoft/db": "^3.0@dev",
+                "yiisoft/db-mysql": "^3.0@dev",
                 "yiisoft/db-sqlite": "^3.0@dev",
                 "yiisoft/di": "^3.0@dev",
                 "yiisoft/log": "^3.0@dev",
+                "yiisoft/rbac": "^3.0@dev",
                 "yiisoft/view": "^3.0@dev",
                 "yiisoft/yii-console": "^3.0@dev",
                 "yiisoft/yii-web": "^3.0@dev"
@@ -1315,7 +1180,7 @@
                 "framework",
                 "yii"
             ],
-            "time": "2018-12-27T14:05:28+00:00"
+            "time": "2018-12-29T16:19:44+00:00"
         },
         {
             "name": "yiisoft/yii-dataview",
@@ -1423,12 +1288,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii-web.git",
-                "reference": "02fb09e743c3853f3e9b7251e1baed34d7777422"
+                "reference": "e57e4c65dff43d8f744074576db56eb7ef3552ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii-web/zipball/02fb09e743c3853f3e9b7251e1baed34d7777422",
-                "reference": "02fb09e743c3853f3e9b7251e1baed34d7777422",
+                "url": "https://api.github.com/repos/yiisoft/yii-web/zipball/e57e4c65dff43d8f744074576db56eb7ef3552ea",
+                "reference": "e57e4c65dff43d8f744074576db56eb7ef3552ea",
                 "shasum": ""
             },
             "require": {
@@ -1527,7 +1392,7 @@
                 "framework",
                 "yii"
             ],
-            "time": "2018-12-26T19:45:04+00:00"
+            "time": "2018-12-29T13:51:35+00:00"
         }
     ],
     "packages-dev": [
@@ -1622,7 +1487,6 @@
         "vlucas/phpdotenv": 20,
         "yiisoft/yii-dataview": 20,
         "league/commonmark": 20,
-        "graphp/graphviz": 20,
         "hiqdev/composer-config-plugin": 20
     },
     "prefer-stable": false,
