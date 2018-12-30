@@ -1897,6 +1897,31 @@ pre.sf-dump {
   text-align: center;
   padding-bottom: 1em;
 }
+svg.deps .link {
+  fill: none;
+  stroke: #666;
+  stroke-width: 1.5px;
+}
+svg.deps #require {
+  fill: black;
+}
+svg.deps #require-dev {
+  fill: gray;
+}
+svg.deps .link.require-dev {
+  stroke: gray;
+  stroke-dasharray: 0,2 1;
+}
+svg.deps circle {
+  fill: #ccc;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+svg.deps text {
+  font: 14px sans-serif;
+  pointer-events: none;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+}
 ul.pagination li {
   display: inline-block;
 }
