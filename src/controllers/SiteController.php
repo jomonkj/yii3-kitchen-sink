@@ -36,11 +36,15 @@ class SiteController extends Controller
     {
 
         $packages = $this->app->params['packages'];
+        $dependenciesFile = Yii::getAlias('@runtime/github/dependencies.json');
+
+        $dependencies = file_exists($dependenciesFile) ? file_get_contents($dependenciesFile) : false;
 
         return $this->render('packages', [
             'title' => 'New composer packages',
             'subTitle' => 'How was Yii 2 split into several packages',
             'packages' => $packages,
+            'dependencies' => $dependencies,
         ]);
     }
 
