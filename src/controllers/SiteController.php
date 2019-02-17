@@ -4,6 +4,8 @@ namespace idk\app\controllers;
 
 use yii\web\Controller;
 use yii\helpers\Yii;
+use yii\web\Response;
+use yii\exceptions\InvalidConfigException;
 
 class SiteController extends Controller
 {
@@ -38,13 +40,13 @@ class SiteController extends Controller
         $packages = $this->app->params['packages'];
         $dependenciesFile = Yii::getAlias('@runtime/github/dependencies.json');
 
-        $dependencies = file_exists($dependenciesFile) ? file_get_contents($dependenciesFile) : false;
+        $hasDependencies = file_exists($dependenciesFile);
 
         return $this->render('packages', [
             'title' => 'New composer packages',
             'subTitle' => 'How was Yii 2 split into several packages',
             'packages' => $packages,
-            'dependencies' => $dependencies,
+            'hasDependencies' => $hasDependencies,
         ]);
     }
 
@@ -60,6 +62,25 @@ class SiteController extends Controller
         return $this->render('config', [
             'configs' => $configs,
         ]);
+    }
+
+    public function actionDependencyGraphData()
+    {
+        $this->app->response->format = Response::FORMAT_RAW;
+
+        $dependenciesFile = Yii::getAlias('@runtime/github/dependencies.json');
+
+        if (!file_exists($dependenciesFile)) {
+            throw new InvalidConfigException("You need to compute dependencies first. See README.md");
+        }
+
+        $dependencies = json_decode(file_get_contents($dependenciesFile), true);
+
+        echo "parent@child\n";
+        foreach ($dependencies as $dep) {
+            echo $dep['source'] . '@' . $dep['target'] . "\n";
+        }
+        
     }
 
 }
