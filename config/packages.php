@@ -7,7 +7,7 @@ return [
     ],
     'cache' => [
         'id' => 'cache',
-        'travis' => 'org',        
+        'travis' => 'com',
     ],
     'db' => [
         'id' => 'db',
