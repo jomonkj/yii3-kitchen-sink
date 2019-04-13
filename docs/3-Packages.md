@@ -76,7 +76,7 @@ The conventional package naming is `yiisoft/something`, without the "yii-" prefi
 * [yiisoft/di](https://github.com/yiisoft/di) : The dependency injection library 
 * [yiisoft/cache](https://github.com/yiisoft/cache) : The caching library 
 * [yiisoft/active-record](https://github.com/yiisoft/active-record) : The Active Record library 
-* [yiisoft/rbac](https://github.com/yiisoft/log) : The role base access control library 
+* [yiisoft/rbac](https://github.com/yiisoft/rbac) : The role base access control library 
 * [yiisoft/view](https://github.com/yiisoft/view) : The view rendering library
 * [yiisoft/mutex](https://github.com/yiisoft/mutex) : The mutex lock implementation
 * [yiisoft/db](https://github.com/yiisoft/db) : The database library 
