@@ -30,5 +30,4 @@ phpunit-skelgen.phar
 phpunit.phar
 
 # Assets
-/public/assets
 /node_modules
