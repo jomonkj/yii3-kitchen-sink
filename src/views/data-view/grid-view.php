@@ -1,4 +1,5 @@
 <?php
+
 /* @var $this yii\web\View */
 
 use idk\app\helpers\Html;
@@ -27,15 +28,6 @@ $this->subTitle = 'GridView, ListView, DetailView';
                 $link = "https://travis-ci.{$model['travis']}/yiisoft/{$model['id']}";
                 return Html::a(Html::img($link . '.svg?branch=master'), $link);    
             }
-        ],
-        [
-            'label' => 'Dependencies',
-            'format' => 'html',
-            'value' => function ($model) {
-                $link = "https://github.com/yiisoft/{$model['id']}";
-                return Html::a(Html::img("/img/dependencies/{$model['id']}-nodev.png"), $link);    
-            }
         ]
-
     ],
 ]) ?>
