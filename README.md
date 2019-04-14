@@ -3,6 +3,9 @@
 This is a Yii 3 project, created to test, document and showcase the new features
 of the framework. You can see it running live on [https://yii3.idk.tn/](https://yii3.idk.tn/).
 
+The source code is available at [machour/yii3-kitchen-sink](https://github.com/machour/yii3-kitchen-sink), and you
+can be running it locally in a few seconds using `./yii serve` on your fresh copy.
+
 > This originally started as a [Wiki post](https://www.yiiframework.com/wiki/2547/draft-understanding-yii-3)
 > but the post was getting too long, and documenting Yii 3 using Yii 3 was too
 > fun to not be done.
@@ -46,10 +49,22 @@ Perform steps 1 to 3 of the manual installation, and then:
 
 You can now access the application via: `http://localhost:30080`
 
-### Disclaimer
+GRAPHS
+------
 
-I'm not affiliated with `@yiisoft`, and I'm still teaching myself Yii 3, so there might be
-some errors. 
+In order to generate the dependencies graphs, you will need to:
 
-Don't hesitate to point them out be [opening a issue](https://github.com/machour/yii3-kitchen-sink/issues/new).
-You can also ask your questions there, I'll try my best to help out.
+```
+# clone all yii3 repos under runtime/github
+./yii github/clone
+# generate the big graph
+./yii packages/d3
+# generate the small graphs
+./yii packages/dependencies
+```
+
+You can update your checkouts by using `./yii github/pull` before generating the graphs again.
+
+
+
+
