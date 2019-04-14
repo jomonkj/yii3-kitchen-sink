@@ -68,9 +68,8 @@ class PackagesController extends Controller
             chdir($packagePath);
             exec('composer update --ignore-platform-reqs');
 
-
             chdir($cwd);
-            $cmd = "php vendor/bin/graph-composer export --no-dev runtime/github/$id public/img/dependencies/$id-nodev.png";
+            $cmd = "php vendor/bin/graph-composer export --no-dev runtime/github/$id public/img/dependencies/$id-nodev.svg";
             exec($cmd);
 
             
