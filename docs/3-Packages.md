@@ -83,6 +83,11 @@ The conventional package naming is `yiisoft/something`, without the "yii-" prefi
 * [yiisoft/rbac](https://github.com/yiisoft/rbac) : The role base access control library 
 * [yiisoft/view](https://github.com/yiisoft/view) : The view rendering library
 * [yiisoft/mutex](https://github.com/yiisoft/mutex) : The mutex lock implementation
+  * [yiisoft/mutex-db-mysql](https://github.com/yiisoft/mutex-db-mysql) : The MySQL DB Driver for Mutex
+  * [yiisoft/mutex-db-oracle](https://github.com/yiisoft/mutex-db-oracle) : The Oracle DB Driver for Mutex
+  * [yiisoft/mutex-db-pgsql](https://github.com/yiisoft/mutex-db-pgsql) : The Postgres DB Driver for Mutex
+  * [yiisoft/mutex-db-redis](https://github.com/yiisoft/mutex-db-redis) : The Redis DB Driver for Mutex
+  * [yiisoft/mutex-file](https://github.com/yiisoft/mutex-file) : The File Driver for Mutex
 * [yiisoft/db](https://github.com/yiisoft/db) : The database library 
 
 ##### Drivers for yiisoft/db
