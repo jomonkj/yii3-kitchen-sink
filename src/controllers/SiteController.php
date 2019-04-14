@@ -59,8 +59,20 @@ class SiteController extends Controller
             $configs[basename($file)] = require($file);
         }
 
+        $files = array_keys($configs);
+        $items = [];
+        foreach ($files as $id => $file) {
+            ob_start();
+            dump($configs[$file]);
+            $content = ob_get_clean();
+            $items[] = [
+                'label' => $file,
+                'content' => '<h4>@vendor/hiqdev/composer-config-plugin-output/' .  $file . '</h4>' . $content,
+            ];
+        }
+
         return $this->render('config', [
-            'configs' => $configs,
+            'items' => $items,
         ]);
     }
 

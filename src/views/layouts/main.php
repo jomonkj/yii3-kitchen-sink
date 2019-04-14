@@ -1,14 +1,17 @@
 <?php
 
 use idk\app\assets\AppAsset;
-use yii\helpers\Url;
+use yii\bootstrap4\Alert;
+use yii\bootstrap4\Html;
+use yii\bootstrap4\Nav;
+use yii\bootstrap4\NavBar;
+use yii\bootstrap4\Breadcrumbs;
+use yii\helpers\Yii;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-AppAsset::register(
-$this
-);
+AppAsset::register($this);
 
 ?>
 <?php $this->beginPage() ?>
@@ -21,52 +24,51 @@ $this
 </head>
 <body>
 <?php $this->beginBody() ?>
-<div id="layout">
-    <!-- Menu toggle -->
-    <a href="#menu" id="menuLink" class="menu-link">
-        <!-- Hamburger icon -->
-        <span></span>
-    </a>
 
-    <div id="menu">
-        <div class="pure-menu">
-            <a class="pure-menu-heading" href="<?= Url::to(['site/index']) ?>"><img src="/img/yii.png" width="100%"/></a>
-            <?= yii\widgets\Menu::widget([
-                'options' => [
-                    'class' => 'pure-menu-list'
-                ],
-                'activeCssClass' => 'pure-menu-selected',
-                'linkTemplate' => '<a href="{url}" class="pure-menu-link">{label}</a>',
-                'itemOptions' => [
-                    'class' => 'pure-menu-item',
-                ],
-                'items' => [
-                    ['label' => 'Home', 'url' => ['site/index']],
-                    ['label' => 'Introduction', 'url' => ['site/intro']],
-                    ['label' => 'Configuration', 'url' => ['site/config']],
-                    ['label' => 'Composer packages', 'url' => ['site/packages']],
-                    // Tests
-                    ['label' => 'yiisoft/yii-dataview', 'items' => [
-                        ['label' => 'GridView', 'url' => ['data-view/index']],
-                        ['label' => 'ListView', 'url' => ['data-view/list-view']],
-                    ]],
-                ],
-            ]); ?>
-        </div>
-    </div>
+<div class="wrap"  id="app">
+    <?php
+    NavBar::begin([
+        'brandLabel' => '<img src="/img/yii.png" style="height: 30px;"/>',
+        'brandUrl' => Yii::getApp()->homeUrl,
+        'options' => [
+            'class' => 'navbar-dark bg-dark navbar-expand-lg',
+        ],
+    ]);
+    $menuItems = [
+        ['label' => 'Introduction', 'url' => ['site/intro']],
+        ['label' => 'Configuration', 'url' => ['site/config']],
+        ['label' => 'Composer packages', 'url' => ['site/packages']],
+        // Tests
+        ['label' => 'yiisoft/yii-dataview', 'items' => [
+            ['label' => 'GridView', 'url' => ['data-view/index']],
+            ['label' => 'ListView', 'url' => ['data-view/list-view']],
+        ]],
+    ];
 
-    <div id="main">
-        <div class="header">
-            <h1><?= $this->title ?: 'Yii 3 Kitchen Sink' ?></h1>
-            <h2><?= $this->subTitle ?></h2>
-        </div>
+    echo Nav::widget([
+        'options' => ['class' => 'navbar-nav ml-auto'],
+        'items' => $menuItems,
+    ]);
+    NavBar::end();
+    ?>
 
-        <div class="content">
+    <div class="container">
+        <?= Breadcrumbs::widget([
+            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+        ]) ?>
+
+        <h1><?= $this->title ?></h1>
         <?= $content ?>
-        </div>
-         
     </div>
 </div>
+
+<footer class="footer">
+    <div class="container">
+        <p class="float-left"><a href="https://github.com/machour/yii3-kitchen-sink">Source Code</a></p>
+
+        <p class="float-right">Powered by <a href="https://www.yiiframework.com/" target="_blank" rel="noopener">Yii</a></p>
+    </div>
+</footer>
 
 <?php $this->endBody() ?>
 </body>
