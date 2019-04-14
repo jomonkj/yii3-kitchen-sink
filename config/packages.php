@@ -77,6 +77,26 @@ return [
         'id' => 'mutex',
         'travis' => 'com',        
     ],
+    'mutex-db-mysql' => [
+        'id' => 'mutex-db-mysql',
+        'travis' => 'com',        
+    ],
+    'mutex-db-oracle' => [
+        'id' => 'mutex-db-oracle',
+        'travis' => 'com',        
+    ],
+    'mutex-db-pgsql' => [
+        'id' => 'mutex-db-pgsql',
+        'travis' => 'com',        
+    ],
+    'mutex-db-redis' => [
+        'id' => 'mutex-db-redis',
+        'travis' => 'com',        
+    ],
+    'mutex-file' => [
+        'id' => 'mutex-file',
+        'travis' => 'com',        
+    ],
     'rbac' => [
         'id' => 'rbac',
         'travis' => 'org',        
