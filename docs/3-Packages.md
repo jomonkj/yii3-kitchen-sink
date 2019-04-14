@@ -73,6 +73,10 @@ Aside from the 3 extensions already encountered above (`yii-console`, `yii-web`,
 The conventional package naming is `yiisoft/something`, without the "yii-" prefix.
 
 * [yiisoft/log](https://github.com/yiisoft/log) : The logging library 
+  * [yiisoft/log-target-db](https://github.com/yiisoft/log-target-db) : DB target for logs 
+  * [yiisoft/log-target-email](https://github.com/yiisoft/log-target-email) : Email target for logs 
+  * [yiisoft/log-target-file](https://github.com/yiisoft/log-target-file) File target for logs 
+  * [yiisoft/log-target-syslog](https://github.com/yiisoft/log-target-syslog) : Syslog target for logs 
 * [yiisoft/di](https://github.com/yiisoft/di) : The dependency injection library 
 * [yiisoft/cache](https://github.com/yiisoft/cache) : The caching library 
 * [yiisoft/active-record](https://github.com/yiisoft/active-record) : The Active Record library 
