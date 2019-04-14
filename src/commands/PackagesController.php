@@ -48,4 +48,56 @@ class PackagesController extends Controller
         file_put_contents($basePath . 'dependencies.json', json_encode($all));
     }
 
+    /**
+     * Generates all dependencies graphics for packages
+     * 
+     * @param string $destination The final JSON file path 
+     */
+    public function actionDependencies()
+    {
+        $all = [];
+
+        $basePath = Yii::getAlias('@runtime/github/');
+        $cwd = getcwd();
+
+        foreach ($this->app->params['packages'] as $id => $info) {
+            echo "Generating $id\n";
+
+            $packagePath = $basePath . $id;
+
+            chdir($packagePath);
+            exec('composer update --ignore-platform-reqs');
+
+
+            chdir($cwd);
+            $cmd = "php vendor/bin/graph-composer export --no-dev runtime/github/$id public/img/dependencies/$id-nodev.png";
+            exec($cmd);
+
+            
+        }
+       /* foreach (glob($basePath . '*', GLOB_ONLYDIR) as $packagePath) {
+            $package = basename($packagePath);
+            $json = json_decode(file_get_contents($basePath . $package . '/composer.json'), true);
+
+            if (isset($json['require'])) {
+                foreach ($json['require'] as $req => $version) {
+                    if (strpos($req, 'yiisoft/') === 0) {
+                        $target = str_replace('yiisoft/', '', $req);
+                        // if ($target === 'core') $target = 'yii-core'; // TODO: fix this in packages
+                        $all[] = ['source' => $package, 'target' => $target, 'type' => 'require'];
+                    }
+                }
+            }
+            if (isset($json['require-dev'])) {
+                foreach ($json['require-dev'] as $req => $version) {
+                    if (strpos($req, 'yiisoft/') === 0) {
+                       // $all[] = ['source' => $package, 'target' => str_replace('yiisoft/', '', $req), 'type' => 'require-dev'];
+                    }
+                }
+            }
+        }
+
+        file_put_contents($basePath . 'dependencies.json', json_encode($all));*/
+    }
+
 }

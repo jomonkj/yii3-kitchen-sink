@@ -1,60 +1,23 @@
 {
-    "name": "yiisoft/yii-project-template",
+    "name": "machour/yii3-kitchen-sink",
     "type": "project",
-    "description": "Yii Framework Project Template",
+    "description": "Exploring Yii3",
     "keywords": [
         "yii",
         "app",
         "project",
         "template"
     ],
-    "homepage": "https://github.com/yiisoft/yii-project-template",
+    "homepage": "https://github.com/machour/yii3-kitchen-sink",
     "license": "BSD-3-Clause",
     "support": {
-        "source": "https://github.com/yiisoft/yii-project-template",
-        "issues": "https://github.com/yiisoft/yii-project-template/issues",
-        "wiki": "https://github.com/yiisoft/yii-project-template/wiki",
-        "forum": "http://www.yiiframework.com/forum/"
+        "source": "https://github.com/machour/yii3-kitchen-sink",
+        "issues": "https://github.com/machour/yii3-kitchen-sink/issues"
     },
     "authors": [
         {
-            "name": "Qiang Xue",
-            "role": "Founder and project lead",
-            "email": "qiang.xue@gmail.com",
-            "homepage": "http://www.yiiframework.com/"
-        },
-        {
-            "name": "Alexander Makarov",
-            "role": "Core framework development",
-            "email": "sam@rmcreative.ru",
-            "homepage": "http://rmcreative.ru/"
-        },
-        {
-            "name": "Maurizio Domba",
-            "role": "Core framework development",
-            "homepage": "http://mdomba.info/"
-        },
-        {
-            "name": "Carsten Brandt",
-            "role": "Core framework development",
-            "email": "mail@cebe.cc",
-            "homepage": "http://cebe.cc/"
-        },
-        {
-            "name": "Paul Klimov",
-            "role": "Core framework development",
-            "email": "klimov.paul@gmail.com"
-        },
-        {
-            "name": "Dmitry Naumenko",
-            "role": "Core framework development",
-            "email": "d.naumenko.a@gmail.com"
-        },
-        {
-            "name": "Boudewijn Vahrmeijer",
-            "role": "Core framework development",
-            "email": "info@dynasource.eu",
-            "homepage": "http://dynasource.eu"
+            "name": "Mehdi Achour",
+            "email": "machour@gmail.com"
         }
     ],
     "minimum-stability": "dev",
@@ -65,14 +28,15 @@
         "yiisoft/yii-console": "^3.0@dev",
         "yiisoft/view": "^3.0@dev",
         "yiisoft/yii-web": "^3.0@dev",
-        "symfony/var-dumper": "^4.3@dev",
         "vlucas/phpdotenv": "^2.5@dev",
         "yiisoft/yii-dataview": "^3.0@dev",
         "league/commonmark": "^0.19.0@dev",
-        "ezyang/htmlpurifier": "~4.6"
+        "ezyang/htmlpurifier": "~4.6",
+        "symfony/var-dumper": "^4.3@dev"
     },
     "require-dev": {
-        "hiqdev/composer-config-plugin": "^1.0@dev"
+        "hiqdev/composer-config-plugin": "^1.0@dev",
+        "clue/graph-composer": "dev-add-options-to-exclude"
     },
     "extra": {
         "branch-alias": {
@@ -98,5 +62,11 @@
         "fxp-asset": {
             "enabled": false
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/markuspoerschke/graph-composer"
+        }
+    ]
 }

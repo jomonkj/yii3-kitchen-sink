@@ -13,22 +13,18 @@ class DataViewController extends Controller
         $dataProvider = new \yii\data\ArrayDataProvider();
         $dataProvider->allModels = $this->app->params['packages'];
        
-        return $this->render('index', [
+        return $this->render('grid-view', [
             'dataProvider' => $dataProvider,
         ]);
     }
 
-    public function actionConfig()
+    public function actionListView()
     {
-        $pluginOutputPath = Yii::getAlias('@vendor/hiqdev/composer-config-plugin-output');
-        $configs = [];
-        foreach (glob($pluginOutputPath . '/*.php') as $file) {
-            if (strrpos($file, '__rebuild.php')) continue;
-            $configs[basename($file)] = require($file);
-        }
-
-        return $this->render('config', [
-            'configs' => $configs,
+        $dataProvider = new \yii\data\ArrayDataProvider();
+        $dataProvider->allModels = $this->app->params['packages'];
+       
+        return $this->render('list-view', [
+            'dataProvider' => $dataProvider,
         ]);
     }
 

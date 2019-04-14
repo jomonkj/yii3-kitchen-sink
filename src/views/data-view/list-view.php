@@ -8,12 +8,10 @@ $this->subTitle = 'GridView, ListView, DetailView';
 
 ?>
 
-<?= \yii\dataview\GridView::widget([
+<?= \yii\dataview\ListView::widget([
     'dataProvider' => $dataProvider,
-    'tableOptions' => [
-        'class' => 'pure-table',
-    ],
-    'columns' => [
+    'itemView' => 'partials/package',
+    /*'columns' => [
         'github' => [
             'format' => 'html',
             'value' => function ($model) {
@@ -27,6 +25,15 @@ $this->subTitle = 'GridView, ListView, DetailView';
                 $link = "https://travis-ci.{$model['travis']}/yiisoft/{$model['id']}";
                 return Html::a(Html::img($link . '.svg?branch=master'), $link);    
             }
+        ],
+        [
+            'label' => 'Dependencies',
+            'format' => 'html',
+            'value' => function ($model) {
+                $link = "https://github.com/yiisoft/{$model['id']}";
+                return Html::a(Html::img("/img/dependencies/{$model['id']}-nodev.png"), $link);    
+            }
         ]
-    ],
+
+    ],*/
 ]) ?>
