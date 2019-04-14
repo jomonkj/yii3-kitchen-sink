@@ -33,8 +33,8 @@ class GithubController extends Controller
 
         foreach ($packages as $package) {
             if (is_dir($this->workDir . '/' . $package)) {
-                Console::error("$package is already cloned");
-                return ExitCode::CANTCREAT;
+                Console::error("$package is already cloned.. skipping");
+                continue;
             }
             $this->git('clone git@github.com:yiisoft/' . $package);
         }

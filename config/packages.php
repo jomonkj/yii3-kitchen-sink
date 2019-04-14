@@ -55,7 +55,23 @@ return [
     ],
     'log' => [
         'id' => 'log',
-        'travis' => 'org',        
+        'travis' => 'org',
+    ],
+    'log-target-db' => [
+        'id' => 'log-target-db',
+        'travis' => 'com',
+    ],
+    'log-target-email' => [
+        'id' => 'log-target-email',
+        'travis' => 'com',
+    ],
+    'log-target-file' => [
+        'id' => 'log-target-file',
+        'travis' => 'org',
+    ],
+    'log-target-syslog' => [
+        'id' => 'log-target-syslog',
+        'travis' => 'org',
     ],
     'mutex' => [
         'id' => 'mutex',
