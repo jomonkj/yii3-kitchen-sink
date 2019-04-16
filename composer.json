@@ -35,11 +35,18 @@
         "ezyang/htmlpurifier": "~4.6",
         "symfony/var-dumper": "^4.3@dev",
         "yiisoft/yii-bootstrap4": "^3.0@dev",
-        "yiisoft/yii-jquery": "^3.0@dev"
+        "yiisoft/yii-jquery": "^3.0@dev",
+        "phploc/phploc": "^4",
+        "yiisoft/active-record": "^3.0@dev",
+        "yiisoft/db-mysql": "^3.0@dev",
+        "yiisoft/db": "^3.0@dev",
+        "yiisoft/rbac": "^3.0@dev",
+        "yiisoft/log-target-file": "^3.0@dev"
     },
     "require-dev": {
         "hiqdev/composer-config-plugin": "^1.0@dev",
-        "clue/graph-composer": "dev-add-options-to-exclude"
+        "clue/graph-composer": "dev-add-options-to-exclude",
+        "yiisoft/yii-debug": "^3.0@dev"
     },
     "extra": {
         "branch-alias": {

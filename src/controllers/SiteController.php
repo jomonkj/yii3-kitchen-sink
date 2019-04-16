@@ -2,6 +2,7 @@
 
 namespace idk\app\controllers;
 
+use yii\db\ConnectionInterface;
 use yii\web\Controller;
 use yii\helpers\Yii;
 use yii\web\Response;
@@ -9,6 +10,14 @@ use yii\exceptions\InvalidConfigException;
 
 class SiteController extends Controller
 {
+    private $db;
+
+    public function __construct($id, $module, ConnectionInterface $db)
+    {
+        parent::__construct($id, $module);
+        $this->db = $db;
+    }
+
     public function actions()
     {
         return [
@@ -20,9 +29,8 @@ class SiteController extends Controller
     
     public function actionIndex()
     {
-        return $this->render('index', [
-            'foo' => 'bar',
-        ]);
+        //$articles = $this->db->createCommand('SELECT count(*) FROM article')->queryScalar();
+        return $this->render('index');
     }
 
     public function actionIntro()
