@@ -58,7 +58,6 @@ Aside from the 3 extensions already encountered above (`yii-console`, `yii-web`,
 
 ##### Misc
 * [yiisoft/yii-swiftmailer](https://github.com/yiisoft/yii-swiftmailer) Swift Mailer Extension
-* [yiisoft/yii-http-client](https://github.com/yiisoft/yii-http-client) HTTP client extension
 * [yiisoft/yii-auth-client](https://github.com/yiisoft/yii-auth-client) External authentication extension
 
 </details>

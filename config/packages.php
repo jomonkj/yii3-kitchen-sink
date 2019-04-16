@@ -153,10 +153,6 @@ return [
         'id' => 'yii-gii',
         'travis' => 'org',        
     ],
-    'yii-http-client' => [
-        'id' => 'yii-http-client',
-        'travis' => 'com',        
-    ],
     'yii-jquery' => [
         'id' => 'yii-jquery',
         'travis' => 'org',        
