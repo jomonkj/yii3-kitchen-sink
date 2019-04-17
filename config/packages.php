@@ -226,6 +226,11 @@ return [
         'travis' => 'org',
         'section' => 'Others',
     ],
+    'yii-queue' => [
+        'id' => 'yii-queue',
+        'travis' => 'com',
+        'section' => 'Others',
+    ],
     'yii-swiftmailer' => [
         'id' => 'yii-swiftmailer',
         'travis' => 'org',
