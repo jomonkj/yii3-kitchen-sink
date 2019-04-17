@@ -2,17 +2,17 @@
 
 namespace idk\app\controllers;
 
+use yii\data\ArrayDataProvider;
 use yii\web\Controller;
-use yii\helpers\Yii;
 
 class DataViewController extends Controller
 {
-   
+
     public function actionIndex()
     {
-        $dataProvider = new \yii\data\ArrayDataProvider();
+        $dataProvider = new ArrayDataProvider();
         $dataProvider->allModels = $this->app->params['packages'];
-       
+
         return $this->render('grid-view', [
             'dataProvider' => $dataProvider,
         ]);
@@ -20,9 +20,9 @@ class DataViewController extends Controller
 
     public function actionListView()
     {
-        $dataProvider = new \yii\data\ArrayDataProvider();
+        $dataProvider = new ArrayDataProvider();
         $dataProvider->allModels = $this->app->params['packages'];
-       
+
         return $this->render('list-view', [
             'dataProvider' => $dataProvider,
         ]);

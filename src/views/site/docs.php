@@ -1,6 +1,6 @@
 <?php
 
-use idk\app\helpers\DocHelper;
+/** @var string $buffer */
 
 $this->title = 'What is Yii 3?';
 $this->subTitle = 'Let\'s explore changes';
@@ -10,7 +10,7 @@ $this->subTitle = 'Let\'s explore changes';
 <div class="row doc-section">
 
 <div class="doc-content col-md-9 col-12 order-1">
-<?= $buffer ?>
+    <?= $buffer ?>
 </div>
 <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
     <div id="doc-nav" class="doc-nav">

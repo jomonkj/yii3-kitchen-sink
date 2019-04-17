@@ -1,21 +1,19 @@
 <?php
 
 use idk\app\assets\AppAsset;
-use yii\bootstrap4\Alert;
-use yii\bootstrap4\Html;
 use yii\bootstrap4\Nav;
 use yii\bootstrap4\NavBar;
 use yii\bootstrap4\Breadcrumbs;
-use yii\helpers\Yii;
+use yii\web\View;
 
-/* @var $this \yii\web\View */
+/* @var $this View */
 /* @var $content string */
 
 AppAsset::register($this);
 
-?>
-<?php $this->beginPage() ?>
-    <!DOCTYPE html>
+$this->beginPage();
+
+?><!DOCTYPE html>
     <html lang="en">
     <head>
         <title><?= $this->title ?: 'Yii 3 Kitchen Sink' ?></title>
@@ -28,8 +26,8 @@ AppAsset::register($this);
     <div class="wrap" id="app">
         <?php
         NavBar::begin([
-            'brandLabel' => '<img src="/img/yii.png" style="height: 30px; margin-right: 1rem"/> Yii3 Kitchen Sink',
-            'brandUrl' => Yii::getApp()->homeUrl,
+            'brandLabel' => '<img src="/img/yii.png" style="height: 30px; margin-right: 1rem" alt="Yii3" /> Yii3 Kitchen Sink',
+            'brandUrl' => $this->getApp()->homeUrl,
             'options' => [
                 'class' => 'navbar-dark bg-dark navbar-expand-lg',
             ],
@@ -73,5 +71,5 @@ AppAsset::register($this);
 
     <?php $this->endBody() ?>
     </body>
-    </html>
+</html>
 <?php $this->endPage() ?>

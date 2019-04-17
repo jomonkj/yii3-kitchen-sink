@@ -16,7 +16,7 @@ const tsTask = () => gulp.src("src/resources/src/ts/app.ts")
 
 const watchTask = () => {
     browserSync.init({
-        proxy: 'localhost:8080'
+        proxy: '[::1]:8080'
     });
 
     gulp.watch('src/resources/src/ts/**/*.ts', tsTask);

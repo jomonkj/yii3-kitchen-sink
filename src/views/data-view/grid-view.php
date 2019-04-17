@@ -1,8 +1,11 @@
 <?php
 
-/* @var $this yii\web\View */
+/** @var $this yii\web\View */
+/** @var ActiveDataProvider $dataProvider */
 
 use idk\app\helpers\Html;
+use yii\activerecord\data\ActiveDataProvider;
+use yii\dataview\GridView;
 
 $this->title = 'yiisoft/yii-dataview';
 $this->subTitle = 'GridView, ListView, DetailView';
@@ -11,7 +14,8 @@ $this->subTitle = 'GridView, ListView, DetailView';
 
 <div class="row">
     <div class="col-md-4">
-        <?= \yii\dataview\GridView::widget([
+        <?=
+        GridView::widget([
             'dataProvider' => $dataProvider,
             'columns' => [
                 'github' => [

@@ -1116,7 +1116,8 @@ pre {
 .table {
   width: 100%;
   margin-bottom: 1rem;
-  color: #494d55; }
+  color: #494d55;
+  background-color: white; }
   .table th,
   .table td {
     padding: 0.5rem;

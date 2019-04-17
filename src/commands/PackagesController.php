@@ -3,10 +3,7 @@
 namespace idk\app\commands;
 
 use yii\console\Controller;
-use yii\console\ExitCode;
 use yii\helpers\Yii;
-use yii\helpers\FileHelper;
-use yii\helpers\Console;
 
 
 class PackagesController extends Controller
@@ -14,14 +11,14 @@ class PackagesController extends Controller
 
     /**
      * Generates the packages dependencies graph definition file
-     * 
-     * @param string $destination The final JSON file path 
+     *
+     * @param string $destination The final JSON file path
      */
     public function actionD3()
     {
         $all = [];
 
-        $basePath = Yii::getAlias('@runtime/github/');
+        $basePath = $this->app->getAlias('@runtime/github/');
 
         foreach (glob($basePath . '*', GLOB_ONLYDIR) as $packagePath) {
             $package = basename($packagePath);
@@ -39,7 +36,7 @@ class PackagesController extends Controller
             if (isset($json['require-dev'])) {
                 foreach ($json['require-dev'] as $req => $version) {
                     if (strpos($req, 'yiisoft/') === 0) {
-                       // $all[] = ['source' => $package, 'target' => str_replace('yiisoft/', '', $req), 'type' => 'require-dev'];
+                        // $all[] = ['source' => $package, 'target' => str_replace('yiisoft/', '', $req), 'type' => 'require-dev'];
                     }
                 }
             }
@@ -50,14 +47,12 @@ class PackagesController extends Controller
 
     /**
      * Generates all dependencies graphics for packages
-     * 
-     * @param string $destination The final JSON file path 
+     *
+     * @param string $destination The final JSON file path
      */
     public function actionDependencies()
     {
-        $all = [];
-
-        $basePath = Yii::getAlias('@runtime/github/');
+        $basePath = $this->app->getAlias('@runtime/github/');
         $cwd = getcwd();
 
         foreach ($this->app->params['packages'] as $id => $info) {
@@ -71,32 +66,7 @@ class PackagesController extends Controller
             chdir($cwd);
             $cmd = "php vendor/bin/graph-composer export --no-dev runtime/github/$id public/img/dependencies/$id-nodev.svg";
             exec($cmd);
-
-            
         }
-       /* foreach (glob($basePath . '*', GLOB_ONLYDIR) as $packagePath) {
-            $package = basename($packagePath);
-            $json = json_decode(file_get_contents($basePath . $package . '/composer.json'), true);
-
-            if (isset($json['require'])) {
-                foreach ($json['require'] as $req => $version) {
-                    if (strpos($req, 'yiisoft/') === 0) {
-                        $target = str_replace('yiisoft/', '', $req);
-                        // if ($target === 'core') $target = 'yii-core'; // TODO: fix this in packages
-                        $all[] = ['source' => $package, 'target' => $target, 'type' => 'require'];
-                    }
-                }
-            }
-            if (isset($json['require-dev'])) {
-                foreach ($json['require-dev'] as $req => $version) {
-                    if (strpos($req, 'yiisoft/') === 0) {
-                       // $all[] = ['source' => $package, 'target' => str_replace('yiisoft/', '', $req), 'type' => 'require-dev'];
-                    }
-                }
-            }
-        }
-
-        file_put_contents($basePath . 'dependencies.json', json_encode($all));*/
     }
 
 }

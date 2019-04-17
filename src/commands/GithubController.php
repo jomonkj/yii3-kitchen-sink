@@ -2,9 +2,9 @@
 
 namespace idk\app\commands;
 
+use yii\base\Action;
 use yii\console\Controller;
 use yii\console\ExitCode;
-use yii\helpers\Yii;
 use yii\helpers\FileHelper;
 use yii\helpers\Console;
 
@@ -15,9 +15,9 @@ class GithubController extends Controller
     
     private $workDir;
     
-    public function beforeAction(\yii\base\Action $action): bool
+    public function beforeAction(Action $action): bool
     {
-        $this->workDir = Yii::getAlias('@runtime/github');
+        $this->workDir = $this->app->getAlias('@runtime/github');
         FileHelper::createDirectory($this->workDir);
         chdir($this->workDir);
 

@@ -6,7 +6,6 @@ use idk\app\helpers\DocHelper;
 use yii\db\ConnectionInterface;
 use yii\helpers\ArrayHelper;
 use yii\web\Controller;
-use yii\helpers\Yii;
 use yii\web\Response;
 use yii\exceptions\InvalidConfigException;
 
@@ -53,7 +52,7 @@ class SiteController extends Controller
     {
 
         $sections = ArrayHelper::index($this->app->params['packages'], 'id', 'section');
-        $dependenciesFile = Yii::getAlias('@runtime/github/dependencies.json');
+        $dependenciesFile = $this->app->getAlias('@runtime/github/dependencies.json');
 
         $hasDependencies = file_exists($dependenciesFile);
 
@@ -69,7 +68,7 @@ class SiteController extends Controller
     {
         $this->app->response->format = Response::FORMAT_RAW;
 
-        $dependenciesFile = Yii::getAlias('@runtime/github/dependencies.json');
+        $dependenciesFile = $this->app->getAlias('@runtime/github/dependencies.json');
 
         if (!file_exists($dependenciesFile)) {
             throw new InvalidConfigException("You need to compute dependencies first. See README.md");

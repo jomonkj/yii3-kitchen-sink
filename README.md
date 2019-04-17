@@ -59,7 +59,3 @@ In order to generate the dependencies graphs, you will need to:
 ```
 
 You can update your checkouts by using `./yii github/pull` before generating the graphs again.
-
-
-
-
