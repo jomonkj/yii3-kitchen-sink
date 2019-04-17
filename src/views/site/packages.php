@@ -17,30 +17,36 @@ DependencyGraphAsset::register($this);
 
 ?>
 
-<h1>Yii 3 packages</h1>
+    <h1>Yii 3 packages</h1>
 
-    <table class="table">
 <?php foreach ($sections as $section => $packages): ?>
-        <tr><td colspan="3"><h2><?= $section ?></h2></td></tr>
+    <h2><?= $section ?></h2>
+    <div class="row mb-5">
         <?php foreach ($packages as $package => $infos): ?>
-
-            <tr class="">
-                <td style="width: 1px;">
-                    <?= Html::a(Html::o('mark-github'), 'https://github.com/yiisoft/' . $package) ?>
-                </td>
-                <td style="width: 1px; white-space: nowrap">yiisoft/<?= $package ?></td>
-                <td>
-                    <a href="https://travis-ci.<?= $infos['travis'] ?>/yiisoft/<?= $package ?>">
-                        <img src="https://travis-ci.<?= $infos['travis'] ?>/yiisoft/<?= $package ?>.svg?branch=master"/>
-                    </a>
-                </td>
-            </tr>
+            <div class=" col-md-3 mb-3">
+                <div class="package-card card h-100">
+                    <div class="card-header">
+                        <b><?= $package ?></b>
+                        <?= Html::a(Html::o('mark-github'), 'https://github.com/yiisoft/' . $package, ['class' => 'float-right']) ?>
+                    </div>
+                    <div class="card-body h-100 text-center">
+                        <a href="/img/dependencies/<?= $infos['id'] ?>-nodev.svg"><img src="/img/dependencies/<?= $infos['id'] ?>-nodev.svg" class="img-fluid" style="max-height: 100px;" alt="<?= $infos['id'] ?> dependencies without dev" /></a>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://travis-ci.<?= $infos['travis'] ?>/yiisoft/<?= $package ?>">
+                            <img src="https://travis-ci.<?= $infos['travis'] ?>/yiisoft/<?= $package ?>.svg?branch=master"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
         <?php endforeach ?>
+    </div>
 <?php endforeach ?>
-    </table>
 
-    <hr/>
+
+
+   <hr />
 
 
 <?php if ($hasDependencies): ?>
