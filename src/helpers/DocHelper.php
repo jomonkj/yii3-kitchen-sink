@@ -2,6 +2,8 @@
 
 namespace idk\app\helpers;
 
+use yii\helpers\Inflector;
+use yii\helpers\StringHelper;
 use yii\helpers\Yii;
 use yii\exceptions\InvalidConfigException;
 use yii\helpers\Html;
@@ -17,17 +19,11 @@ class DocHelper
 
     public static function doc($file)
     {
-        $path = Yii::getAlias("@doc/$file.md");
-        if (!file_exists($path)) {
+        if (!file_exists($file)) {
             throw new InvalidConfigException("Cannot find $file.md");
         }
 
-        return self::renderFile($path);
-    }
-
-    public static function readme()
-    {
-        return self::renderFile(Yii::getAlias("@doc/../README.md"));
+        return self::renderFile($file);
     }
 
     private static function renderFile($path)
@@ -38,6 +34,14 @@ class DocHelper
         $html = preg_replace_callback('!<a href="([^"]+).md"!', function($match) {
              return isset(self::$redirections[$match[1]]) ? '<a href="' . Url::to(self::$redirections[$match[1]]) . '"' : $match[0];
         }, $html);
+
+        $html = preg_replace_callback( '/(\<h[1-6](.*?))\>(.*)(<\/h[1-6]>)/i', function( $matches ) {
+            if (  stripos( $matches[0], 'id=' ) === false) :
+                $matches[0] = $matches[1] . $matches[2] . ' id="' . Inflector::slug( $matches[3] ) . '">' . $matches[3] . $matches[4];
+            endif;
+            return $matches[0];
+        }, $html );
+
         return Html::tag('div', $html, ['class' => 'md']);
     }
 }

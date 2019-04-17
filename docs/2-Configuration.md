@@ -1,3 +1,5 @@
+# Configuration
+
 If you've ever installed an extension using Yii 2, you may/certainly have found yourself on the extension README file, looking for the chunk of configuration to copy/paste in your own `config/main.php` file.
 
 This can often lead to:

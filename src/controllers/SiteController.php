@@ -2,7 +2,9 @@
 
 namespace idk\app\controllers;
 
+use idk\app\helpers\DocHelper;
 use yii\db\ConnectionInterface;
+use yii\helpers\ArrayHelper;
 use yii\web\Controller;
 use yii\helpers\Yii;
 use yii\web\Response;
@@ -30,22 +32,27 @@ class SiteController extends Controller
     public function actionIndex()
     {
         //$articles = $this->db->createCommand('SELECT count(*) FROM article')->queryScalar();
-        return $this->render('index');
+        $readme = DocHelper::doc($this->app->getAlias('@app/README.md'));
+        return $this->render('index', [
+            'readme' => $readme,
+        ]);
     }
 
-    public function actionIntro()
+    public function actionDocs()
     {
-        return $this->render('doc', [
-            'document' => '1-Intro',
-            'title' => 'What is Yii 3?',
-            'subTitle' => 'Why was it made, and how',
+        $buffer = '';
+        foreach (glob($this->app->getAlias('@doc/*.md')) as $doc) {
+            $buffer .= DocHelper::doc($doc);
+        }
+        return $this->render('docs', [
+            'buffer' => $buffer
         ]);
     }
 
     public function actionPackages()
     {
 
-        $packages = $this->app->params['packages'];
+        $sections = ArrayHelper::index($this->app->params['packages'], 'id', 'section');
         $dependenciesFile = Yii::getAlias('@runtime/github/dependencies.json');
 
         $hasDependencies = file_exists($dependenciesFile);
@@ -53,34 +60,8 @@ class SiteController extends Controller
         return $this->render('packages', [
             'title' => 'New composer packages',
             'subTitle' => 'How was Yii 2 split into several packages',
-            'packages' => $packages,
+            'sections' => $sections,
             'hasDependencies' => $hasDependencies,
-        ]);
-    }
-
-    public function actionConfig()
-    {
-        $pluginOutputPath = Yii::getAlias('@vendor/hiqdev/composer-config-plugin-output');
-        $configs = [];
-        foreach (glob($pluginOutputPath . '/*.php') as $file) {
-            if (strrpos($file, '__rebuild.php')) continue;
-            $configs[basename($file)] = require($file);
-        }
-
-        $files = array_keys($configs);
-        $items = [];
-        foreach ($files as $id => $file) {
-            ob_start();
-            dump($configs[$file]);
-            $content = ob_get_clean();
-            $items[] = [
-                'label' => $file,
-                'content' => '<h4>@vendor/hiqdev/composer-config-plugin-output/' .  $file . '</h4>' . $content,
-            ];
-        }
-
-        return $this->render('config', [
-            'items' => $items,
         ]);
     }
 

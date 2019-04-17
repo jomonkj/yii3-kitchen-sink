@@ -1,18 +1,14 @@
+# Packages
+
 Here are the new packages introduced in Yii 3, from this [official list](https://github.com/yiisoft/docs/blob/master/000-packages.md#yii-framework).
 
 ### The Framework
 
-<details>
-  <summary>The new heart of Yii + 3 main extensions.</summary>
-
 * [yiisoft/yii-core](https://github.com/yiisoft/yii-core) : This is the new 
 *kernel* of Yii. It defines the base framework and its core features like 
-behaviors, i18n, mail, validation..
+behaviors, validation..
 
-Then there's three important packages, considered as Extensions. 
-
-Each one is responsible for implementing the core functionalities of the channel
-they refer to:
+Then there are three important packages, split by channel: 
 
 * [yiisoft/yii-console](https://github.com/yiisoft/yii-console): implements the 
 bases to build a console application (the base `Controller` for commands, the
@@ -21,12 +17,10 @@ bases to build a console application (the base `Controller` for commands, the
 * [yiisoft/yii-rest](https://github.com/yiisoft/yii-rest): implements all that
 you need to build a REST interface (ActiveController, ..)
 
-</details>
 
 ### Other Extensions
 
-<details>
-  <summary>Depend (at least) on yii-core.</summary>
+Depends on yii-core
 
 The conventional package naming is `yiisoft/yii-something`.
 
@@ -60,14 +54,12 @@ Aside from the 3 extensions already encountered above (`yii-console`, `yii-web`,
 * [yiisoft/yii-swiftmailer](https://github.com/yiisoft/yii-swiftmailer) Swift Mailer Extension
 * [yiisoft/yii-auth-client](https://github.com/yiisoft/yii-auth-client) External authentication extension
 
-</details>
+
 
 
 ### Librairies
 
-<details>
-  <summary>Do not depend on yii-core and meant to be usable outside the
-  framework.</summary>
+Do not depend on yii-core and meant to be usable outside the framework.
 
 The conventional package naming is `yiisoft/something`, without the "yii-" prefix.
 
@@ -101,14 +93,12 @@ The various drivers for DB have also been separated into packages:
   * [yiisoft/db-sphinx](https://github.com/yiisoft/db-sphinx) Sphinx support
   * [yiisoft/db-redis](https://github.com/yiisoft/db-redis) Redis support
   * [yiisoft/db-mongodb](https://github.com/yiisoft/db-mongodb) MongoDB support
-  * [yiisoft/db-elasticsearch](https://github.com/yiisoft/db-elasticsearch) Elastic 
+  * [yiisoft/db-elasticsearch](https://github.com/yiisoft/db-elasticsearch) Elasticsearch support
 
-</details>
 
 ### Project template and application bases
 
-<details>
-  <summary>To get you started with your next project.</summary>
+To get you started with your next project.
 
 * [yiisoft/yii-project-template](https://github.com/yiisoft/yii-project-template)
 
@@ -120,5 +110,3 @@ your project next:
 *  [yiisoft/yii-base-cli](https://github.com/yiisoft/yii-base-cli)
 *  [yiisoft/yii-base-web](https://github.com/yiisoft/yii-base-web)
 *  [yiisoft/yii-base-api](https://github.com/yiisoft/yii-base-api)
-
-</details>

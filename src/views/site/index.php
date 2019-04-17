@@ -1,7 +1,7 @@
 <?php
 
-use idk\app\helpers\DocHelper;
-/* @var $foo string */
+/* @var $readme string */
+
 ?>
 
-<?= DocHelper::readme() ?>
+<?= $readme ?>

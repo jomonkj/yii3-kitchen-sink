@@ -1,4 +1,25 @@
-$primary: #d90000;
+@import "../../../../node_modules/typeface-open-sans/index";
+
+$font-family-sans-serif:     "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-size-base: .9rem;
+
+$font-weight-bold: 400;
+$font-weight-bolder: 600;
+
+$headings-font-weight: 400;
+
+$h1-font-size: 24px;
+$h2-font-size: 22px;
+$h3-font-size: 20px;
+$h4-font-size: 18px;
+$h5-font-size: 16px;
+$h6-font-size: 14px;
+
+$paragraph-margin-bottom: .5rem;
+
+$primary: #8A40A7;
+$body-color: #494d55;
+$body-bg: #f9f9fb;
 
 @import "../../../../node_modules/bootstrap/scss/functions";
 @import "../../../../node_modules/bootstrap/scss/variables";
@@ -23,7 +44,7 @@ $primary: #d90000;
 //@import "../../../../node_modules/bootstrap/scss/breadcrumb";
 @import "../../../../node_modules/bootstrap/scss/pagination";
 //@import "../../../../node_modules/bootstrap/scss/badge";
-//@import "../../../../node_modules/bootstrap/scss/jumbotron";
+@import "../../../../node_modules/bootstrap/scss/jumbotron";
 @import "../../../../node_modules/bootstrap/scss/alert";
 //@import "../../../../node_modules/bootstrap/scss/progress";
 //@import "../../../../node_modules/bootstrap/scss/media";
@@ -38,7 +59,22 @@ $primary: #d90000;
 @import "../../../../node_modules/bootstrap/scss/utilities";
 @import "../../../../node_modules/bootstrap/scss/print";
 
+@import "mixins";
+@import "docs";
+
 $footer-height: 60px;
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d7d6d6;
+}
+
+.md {
+  margin-bottom: 4rem;
+}
 
 html,
 body {

@@ -28,16 +28,16 @@ AppAsset::register($this);
 <div class="wrap"  id="app">
     <?php
     NavBar::begin([
-        'brandLabel' => '<img src="/img/yii.png" style="height: 30px;"/>',
+        'brandLabel' => '<img src="/img/yii.png" style="height: 30px; margin-right: 1rem"/> Yii3 Kitchen Sink',
         'brandUrl' => Yii::getApp()->homeUrl,
         'options' => [
             'class' => 'navbar-dark bg-dark navbar-expand-lg',
         ],
     ]);
+
     $menuItems = [
-        ['label' => 'Introduction', 'url' => ['site/intro']],
-        ['label' => 'Configuration', 'url' => ['site/config']],
-        ['label' => 'Composer packages', 'url' => ['site/packages']],
+        ['label' => 'Documentation', 'url' => ['site/docs']],
+        ['label' => 'Packages', 'url' => ['site/packages']],
         // Tests
         ['label' => 'yiisoft/yii-dataview', 'items' => [
             ['label' => 'GridView', 'url' => ['data-view/index']],
@@ -57,7 +57,6 @@ AppAsset::register($this);
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
 
-        <h1><?= $this->title ?></h1>
         <?= $content ?>
     </div>
 </div>

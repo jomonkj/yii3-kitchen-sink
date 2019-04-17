@@ -10,17 +10,6 @@ can be running it locally in a few seconds using `./yii serve` on your fresh cop
 > but the post was getting too long, and documenting Yii 3 using Yii 3 was too
 > fun to not be done.
 
-You may want to check the [commits](https://github.com/machour/yii3-kitchen-sink/commits/master) of this repository to see how I got there. 
-
-You can also checkout this repository first commit:
-
-    git checkout 818c6bcc23f08376f1ec35a013c03fb77801c89e
-
-and then progressively update to later commits:
-
-    git checkout <commit-hash>
-
-
 REQUIREMENTS
 ------------
 
@@ -28,6 +17,9 @@ The minimum requirement by this project template is that your Web server support
 
 INSTALLATION
 ------------
+
+<div class="row">
+<div class="col-md-6">
 
 ### Manually
 
@@ -37,17 +29,20 @@ INSTALLATION
 4. Install dependencies: `composer install`
 5. Run the project: `./vendor/bin/yii serve`
 
-You can now access it via `http://localhost:8080/`
+You can now access it at [http://localhost:8080](http://localhost:8080)
+</div>
+<div class="col-md-6">
 
 ### Using docker
 
 Perform steps 1 to 3 of the manual installation, and then:
 
-4. Get a bash on the docker image: `docker-compose run --rm php bash``
+4. Get a bash on the docker image: `docker-compose run --rm php bash`
 5. Install dependencies: `composer install`
 6. From your docker host, run: `docker-compose up -d`
 
-You can now access the application via: `http://localhost:30080`
+You can now access the application at [http://localhost:30080](http://localhost:30080)
+</div></div>
 
 GRAPHS
 ------

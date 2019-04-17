@@ -5,7 +5,7 @@ use idk\app\helpers\Html;
 use yii\helpers\Yii;
 use idk\app\assets\DependencyGraphAsset;
 
-/** @var array $packages */
+/** @var array $sections */
 /** @var string $title */
 /** @var string $subTitle */
 /** @var bool $hasDependencies */
@@ -17,30 +17,28 @@ DependencyGraphAsset::register($this);
 
 ?>
 
-<?= DocHelper::doc('3-Packages') ?>
+<h1>Yii 3 packages</h1>
 
-    <hr/>
-
-    <p>
-        The current on-going effort is to make the grid below all green:
-    </p>
-
-    <div class="row">
+    <table class="table">
+<?php foreach ($sections as $section => $packages): ?>
+        <tr><td colspan="3"><h2><?= $section ?></h2></td></tr>
         <?php foreach ($packages as $package => $infos): ?>
 
-                <div class="col-6 col-sm-4 col-md-2 mb-4 text-center">
-                    <div><?= $package ?></div>
+            <tr class="">
+                <td style="width: 1px;">
                     <?= Html::a(Html::o('mark-github'), 'https://github.com/yiisoft/' . $package) ?>
-                    <p>
-                        <a href="https://travis-ci.<?= $infos['travis'] ?>/yiisoft/<?= $package ?>">
-                            <img src="https://travis-ci.<?= $infos['travis'] ?>/yiisoft/<?= $package ?>.svg?branch=master"/>
-                        </a>
-                    </p>
-
-                </div>
+                </td>
+                <td style="width: 1px; white-space: nowrap">yiisoft/<?= $package ?></td>
+                <td>
+                    <a href="https://travis-ci.<?= $infos['travis'] ?>/yiisoft/<?= $package ?>">
+                        <img src="https://travis-ci.<?= $infos['travis'] ?>/yiisoft/<?= $package ?>.svg?branch=master"/>
+                    </a>
+                </td>
+            </tr>
 
         <?php endforeach ?>
-    </div>
+<?php endforeach ?>
+    </table>
 
     <hr/>
 

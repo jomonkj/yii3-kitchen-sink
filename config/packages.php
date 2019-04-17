@@ -1,184 +1,254 @@
-<?php
+<?php /** @noinspection MissedFieldInspection */
 
 return [
-    'active-record' => [
-        'id' => 'active-record',
+    // Framework
+    'yii-core' => [
+        'id' => 'yii-core',
         'travis' => 'org',
-    ],
-    'cache' => [
-        'id' => 'cache',
-        'travis' => 'com',
-    ],
-    'db' => [
-        'id' => 'db',
-        'travis' => 'org',        
-    ],
-    'db-elasticsearch' => [
-        'id' => 'db-elasticsearch',
-        'travis' => 'com',        
-    ],
-    'db-mongodb' => [
-        'id' => 'db-mongodb',
-        'travis' => 'org',        
-    ],
-    'db-mssql' => [
-        'id' => 'db-mssql',
-        'travis' => 'org',        
-    ],
-    'db-mysql' => [
-        'id' => 'db-mysql',
-        'travis' => 'com',        
-    ],
-    'db-oracle' => [
-        'id' => 'db-oracle',
-        'travis' => 'org',        
-    ],
-    'db-pgsql' => [
-        'id' => 'db-pgsql',
-        'travis' => 'com',        
-    ],
-    'db-redis' => [
-        'id' => 'db-redis',
-        'travis' => 'org',        
-    ],
-    'db-sphinx' => [
-        'id' => 'db-sphinx',
-        'travis' => 'org',        
-    ],
-    'db-sqlite' => [
-        'id' => 'db-sqlite',
-        'travis' => 'com',        
-    ],
-    'di' => [
-        'id' => 'di',
-        'travis' => 'org',        
-    ],
-    'log' => [
-        'id' => 'log',
-        'travis' => 'org',
-    ],
-    'log-target-db' => [
-        'id' => 'log-target-db',
-        'travis' => 'com',
-    ],
-    'log-target-email' => [
-        'id' => 'log-target-email',
-        'travis' => 'com',
-    ],
-    'log-target-file' => [
-        'id' => 'log-target-file',
-        'travis' => 'org',
-    ],
-    'log-target-syslog' => [
-        'id' => 'log-target-syslog',
-        'travis' => 'org',
-    ],
-    'mutex' => [
-        'id' => 'mutex',
-        'travis' => 'com',        
-    ],
-    'mutex-db-mysql' => [
-        'id' => 'mutex-db-mysql',
-        'travis' => 'com',        
-    ],
-    'mutex-db-oracle' => [
-        'id' => 'mutex-db-oracle',
-        'travis' => 'com',        
-    ],
-    'mutex-db-pgsql' => [
-        'id' => 'mutex-db-pgsql',
-        'travis' => 'com',        
-    ],
-    'mutex-db-redis' => [
-        'id' => 'mutex-db-redis',
-        'travis' => 'com',        
-    ],
-    'mutex-file' => [
-        'id' => 'mutex-file',
-        'travis' => 'com',        
-    ],
-    'rbac' => [
-        'id' => 'rbac',
-        'travis' => 'org',        
-    ],
-    'view' => [
-        'id' => 'view',
-        'travis' => 'org',        
-    ],
-    'yii-auth-client' => [
-        'id' => 'yii-auth-client',
-        'travis' => 'com',        
-    ],
-    'yii-base-api' => [
-        'id' => 'yii-base-api',
-        'travis' => 'com',        
-    ],
-    'yii-base-cli' => [
-        'id' => 'yii-base-cli',
-        'travis' => 'com',        
-    ],
-    'yii-base-web' => [
-        'id' => 'yii-base-web',
-        'travis' => 'org',        
-    ],
-    'yii-bootstrap3' => [
-        'id' => 'yii-bootstrap3',
-        'travis' => 'org',        
-    ],
-    'yii-bootstrap4' => [
-        'id' => 'yii-bootstrap4',
-        'travis' => 'org',        
-    ],
-    'yii-captcha' => [
-        'id' => 'yii-captcha',
-        'travis' => 'org',        
+        'section' => 'Framework',
     ],
     'yii-console' => [
         'id' => 'yii-console',
-        'travis' => 'com',        
-    ],
-    'yii-core' => [
-        'id' => 'yii-core',
-        'travis' => 'org',        
-    ],
-    'yii-dataview' => [
-        'id' => 'yii-dataview',
-        'travis' => 'com',        
-    ],
-    'yii-debug' => [
-        'id' => 'yii-debug',
-        'travis' => 'org',        
-    ],
-    'yii-gii' => [
-        'id' => 'yii-gii',
-        'travis' => 'org',        
-    ],
-    'yii-jquery' => [
-        'id' => 'yii-jquery',
-        'travis' => 'org',        
-    ],
-    'yii-masked-input' => [
-        'id' => 'yii-masked-input',
-        'travis' => 'org',        
-    ],
-    'yii-project-template' => [
-        'id' => 'yii-project-template',
-        'travis' => 'org',        
+        'travis' => 'com',
+        'section' => 'Framework',
     ],
     'yii-rest' => [
         'id' => 'yii-rest',
-        'travis' => 'org',        
-    ],
-    'yii-swiftmailer' => [
-        'id' => 'yii-swiftmailer',
-        'travis' => 'org',        
-    ],
-    'yii-twig' => [
-        'id' => 'yii-twig',
-        'travis' => 'org',        
+        'travis' => 'org',
+        'section' => 'Framework',
     ],
     'yii-web' => [
         'id' => 'yii-web',
         'travis' => 'org',
+        'section' => 'Framework',
     ],
+
+    // Project template and Application bases
+    'yii-project-template' => [
+        'id' => 'yii-project-template',
+        'travis' => 'org',
+        'section' => 'Project template and Application bases',
+    ],
+    'yii-base-api' => [
+        'id' => 'yii-base-api',
+        'travis' => 'com',
+        'section' => 'Project template and Application bases',
+    ],
+    'yii-base-cli' => [
+        'id' => 'yii-base-cli',
+        'travis' => 'com',
+        'section' => 'Project template and Application bases',
+    ],
+    'yii-base-web' => [
+        'id' => 'yii-base-web',
+        'travis' => 'org',
+        'section' => 'Project template and Application bases',
+    ],
+
+
+    // Libraries
+    'active-record' => [
+        'id' => 'active-record',
+        'travis' => 'org',
+        'section' => 'Libraries',
+    ],
+    'cache' => [
+        'id' => 'cache',
+        'travis' => 'com',
+        'section' => 'Libraries',
+    ],
+    'di' => [
+        'id' => 'di',
+        'travis' => 'org',
+        'section' => 'Libraries',
+    ],
+    'rbac' => [
+        'id' => 'rbac',
+        'travis' => 'org',
+        'section' => 'Libraries',
+    ],
+    'view' => [
+        'id' => 'view',
+        'travis' => 'org',
+        'section' => 'Libraries',
+    ],
+
+    // DB
+    'db' => [
+        'id' => 'db',
+        'travis' => 'org',
+        'section' => 'Database',
+    ],
+    'db-elasticsearch' => [
+        'id' => 'db-elasticsearch',
+        'travis' => 'com',
+        'section' => 'Database',
+    ],
+    'db-mongodb' => [
+        'id' => 'db-mongodb',
+        'travis' => 'org',
+        'section' => 'Database',
+    ],
+    'db-mssql' => [
+        'id' => 'db-mssql',
+        'travis' => 'org',
+        'section' => 'Database',
+    ],
+    'db-mysql' => [
+        'id' => 'db-mysql',
+        'travis' => 'com',
+        'section' => 'Database',
+    ],
+    'db-oracle' => [
+        'id' => 'db-oracle',
+        'travis' => 'org',
+        'section' => 'Database',
+    ],
+    'db-pgsql' => [
+        'id' => 'db-pgsql',
+        'travis' => 'com',
+        'section' => 'Database',
+    ],
+    'db-redis' => [
+        'id' => 'db-redis',
+        'travis' => 'org',
+        'section' => 'Database',
+    ],
+    'db-sphinx' => [
+        'id' => 'db-sphinx',
+        'travis' => 'org',
+        'section' => 'Database',
+    ],
+    'db-sqlite' => [
+        'id' => 'db-sqlite',
+        'travis' => 'com',
+        'section' => 'Database',
+    ],
+
+
+
+
+    // Log
+    'log' => [
+        'id' => 'log',
+        'travis' => 'org',
+        'section' => 'Logs',
+    ],
+    'log-target-db' => [
+        'id' => 'log-target-db',
+        'travis' => 'com',
+        'section' => 'Logs',
+    ],
+    'log-target-email' => [
+        'id' => 'log-target-email',
+        'travis' => 'com',
+        'section' => 'Logs',
+    ],
+    'log-target-file' => [
+        'id' => 'log-target-file',
+        'travis' => 'org',
+        'section' => 'Logs',
+    ],
+    'log-target-syslog' => [
+        'id' => 'log-target-syslog',
+        'travis' => 'org',
+        'section' => 'Logs',
+    ],
+
+
+    // Mutex
+    'mutex' => [
+        'id' => 'mutex',
+        'travis' => 'com',
+        'section' => 'Mutex'
+    ],
+    'mutex-db-mysql' => [
+        'id' => 'mutex-db-mysql',
+        'travis' => 'com',
+        'section' => 'Mutex'
+    ],
+    'mutex-db-oracle' => [
+        'id' => 'mutex-db-oracle',
+        'travis' => 'com',
+        'section' => 'Mutex'
+    ],
+    'mutex-db-pgsql' => [
+        'id' => 'mutex-db-pgsql',
+        'travis' => 'com',
+        'section' => 'Mutex'
+    ],
+    'mutex-db-redis' => [
+        'id' => 'mutex-db-redis',
+        'travis' => 'com',
+        'section' => 'Mutex'
+    ],
+    'mutex-file' => [
+        'id' => 'mutex-file',
+        'travis' => 'com',
+        'section' => 'Mutex'
+    ],
+
+    // Widgets and wrappers
+    'yii-bootstrap3' => [
+        'id' => 'yii-bootstrap3',
+        'travis' => 'org',
+        'section' => 'Widgets and wrappers',
+    ],
+    'yii-bootstrap4' => [
+        'id' => 'yii-bootstrap4',
+        'travis' => 'org',
+        'section' => 'Widgets and wrappers',
+    ],
+    'yii-dataview' => [
+        'id' => 'yii-dataview',
+        'travis' => 'com',
+        'section' => 'Widgets and wrappers',
+    ],
+    'yii-masked-input' => [
+        'id' => 'yii-masked-input',
+        'travis' => 'org',
+        'section' => 'Widgets and wrappers',
+    ],
+
+    // Others
+    'yii-auth-client' => [
+        'id' => 'yii-auth-client',
+        'travis' => 'com',
+        'section' => 'Others',
+    ],
+    'yii-captcha' => [
+        'id' => 'yii-captcha',
+        'travis' => 'org',
+        'section' => 'Others',
+    ],
+    'yii-jquery' => [
+        'id' => 'yii-jquery',
+        'travis' => 'org',
+        'section' => 'Others',
+    ],
+    'yii-swiftmailer' => [
+        'id' => 'yii-swiftmailer',
+        'travis' => 'org',
+        'section' => 'Others',
+    ],
+    'yii-twig' => [
+        'id' => 'yii-twig',
+        'travis' => 'org',
+        'section' => 'Others',
+    ],
+
+    // Tools
+    'yii-debug' => [
+        'id' => 'yii-debug',
+        'travis' => 'org',
+        'section' => 'Tools',
+    ],
+    'yii-gii' => [
+        'id' => 'yii-gii',
+        'travis' => 'org',
+        'section' => 'Tools',
+    ],
+
+
+
 ];
