@@ -1,6 +1,6 @@
 <?php
 
-use idk\app\assets\AppAsset;
+use app\assets\AppAsset;
 use yii\bootstrap4\Nav;
 use yii\bootstrap4\NavBar;
 use yii\bootstrap4\Breadcrumbs;

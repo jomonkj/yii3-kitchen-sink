@@ -1,9 +1,7 @@
 <?php
 
-use idk\app\helpers\DocHelper;
-use idk\app\helpers\Html;
-use yii\helpers\Yii;
-use idk\app\assets\DependencyGraphAsset;
+use app\assets\DependencyGraphAsset;
+use app\helpers\Html;
 
 /** @var array $sections */
 /** @var string $title */
@@ -26,16 +24,14 @@ DependencyGraphAsset::register($this);
             <div class=" col-md-3 mb-3">
                 <div class="package-card card h-100">
                     <div class="card-header">
-                        <b><?= $package ?></b>
+                        <b><?= Html::a($package, ['site/package', 'package' => $package]) ?></b>
                         <?= Html::a(Html::o('mark-github'), 'https://github.com/yiisoft/' . $package, ['class' => 'float-right']) ?>
                     </div>
                     <div class="card-body h-100 text-center">
                         <a href="/img/dependencies/<?= $infos['id'] ?>-nodev.svg"><img src="/img/dependencies/<?= $infos['id'] ?>-nodev.svg" class="img-fluid" style="max-height: 100px;" alt="<?= $infos['id'] ?> dependencies without dev" /></a>
                     </div>
                     <div class="card-footer">
-                        <a href="https://travis-ci.<?= $infos['travis'] ?>/yiisoft/<?= $package ?>">
-                            <img src="https://travis-ci.<?= $infos['travis'] ?>/yiisoft/<?= $package ?>.svg?branch=master"/>
-                        </a>
+                        <?= Html::travisBadge($package, $infos['travis']) ?>
                     </div>
                 </div>
             </div>

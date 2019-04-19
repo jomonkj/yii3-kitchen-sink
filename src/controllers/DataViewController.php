@@ -1,6 +1,6 @@
 <?php
 
-namespace idk\app\controllers;
+namespace app\controllers;
 
 use yii\data\ArrayDataProvider;
 use yii\web\Controller;

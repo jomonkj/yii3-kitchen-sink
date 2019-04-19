@@ -63,7 +63,7 @@
         }
     },
     "autoload": {
-        "psr-4": {"idk\\app\\": "src"}
+        "psr-4": {"app\\": "src"}
     },
     "config": {
         "foxy": {

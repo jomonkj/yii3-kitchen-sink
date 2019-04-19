@@ -1,11 +1,13 @@
 <?php
 
-namespace idk\app\controllers;
+namespace app\controllers;
 
-use idk\app\helpers\DocHelper;
+use app\helpers\DocHelper;
 use yii\db\ConnectionInterface;
 use yii\helpers\ArrayHelper;
+use yii\helpers\Yii;
 use yii\web\Controller;
+use yii\web\NotFoundHttpException;
 use yii\web\Response;
 use yii\exceptions\InvalidConfigException;
 
@@ -61,6 +63,28 @@ class SiteController extends Controller
             'subTitle' => 'How was Yii 2 split into several packages',
             'sections' => $sections,
             'hasDependencies' => $hasDependencies,
+        ]);
+    }
+
+    public function actionPackage(string $package): string
+    {
+        $repo = $this->app->params['packages'][$package] ?? false;
+        if (!$repo) {
+            throw new NotFoundHttpException("The package $package does not exist");
+        }
+
+        try {
+            $readme = DocHelper::doc($this->app->getAlias("@github/$package/README.md"));
+        } catch (InvalidConfigException $e) {
+            $readme = 'No README.md';
+        }
+
+        $composer = file_get_contents($this->app->getAlias("@github/$package/composer.json"));
+
+        return $this->render('package', [
+            'package' => $repo,
+            'readme' => $readme,
+            'composer' => $composer,
         ]);
     }
 

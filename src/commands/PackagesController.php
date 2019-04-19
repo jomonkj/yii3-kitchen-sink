@@ -1,9 +1,9 @@
 <?php
 
-namespace idk\app\commands;
+namespace app\commands;
 
 use yii\console\Controller;
-use yii\helpers\Yii;
+use yii\helpers\FileHelper;
 
 
 class PackagesController extends Controller
@@ -14,7 +14,7 @@ class PackagesController extends Controller
      *
      * @param string $destination The final JSON file path
      */
-    public function actionD3()
+    public function actionD3(): void
     {
         $all = [];
 
@@ -50,7 +50,7 @@ class PackagesController extends Controller
      *
      * @param string $destination The final JSON file path
      */
-    public function actionDependencies()
+    public function actionDependencies(): void
     {
         $basePath = $this->app->getAlias('@runtime/github/');
         $cwd = getcwd();
@@ -65,6 +65,23 @@ class PackagesController extends Controller
 
             chdir($cwd);
             $cmd = "php vendor/bin/graph-composer export --no-dev runtime/github/$id public/img/dependencies/$id-nodev.svg";
+            exec($cmd);
+        }
+    }
+
+    public function actionPdepend(): void
+    {
+        $basePath = $this->app->getAlias('@runtime/github');
+
+        foreach ($this->app->params['packages'] as $id => $info) {
+            echo "Generating $id\n";
+
+            $imgPath = "public/img/packages/$id";
+            FileHelper::createDirectory($imgPath);
+
+            $srcPath = "$basePath/$id/src/";
+
+            $cmd = "./pdepend.phar --summary-xml=$imgPath/summary.xml --jdepend-chart=$imgPath/chart.svg --overview-pyramid=$imgPath/pyramid.svg $srcPath";
             exec($cmd);
         }
     }

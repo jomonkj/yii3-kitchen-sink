@@ -1,6 +1,6 @@
 <?php
 
-namespace idk\app\components;
+namespace app\components;
 
 class View extends \yii\web\View
 {

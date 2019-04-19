@@ -1,6 +1,6 @@
 <?php
 
-namespace idk\app\models;
+namespace app\models;
 
 use yii\web\IdentityInterface;
 

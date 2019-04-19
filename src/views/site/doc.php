@@ -1,6 +1,6 @@
 <?php
 
-use idk\app\helpers\DocHelper;
+use app\helpers\DocHelper;
 
 /** @var string $document */
 /** @var string $title */

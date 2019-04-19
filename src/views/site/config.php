@@ -1,6 +1,6 @@
 <?php
 
-use idk\app\helpers\DocHelper;use yii\bootstrap4\Tabs;
+use app\helpers\DocHelper;use yii\bootstrap4\Tabs;
 /* @var $this yii\web\View */
 /* @var $items [] */
 

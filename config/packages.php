@@ -73,6 +73,23 @@ return [
         'section' => 'Libraries',
     ],
 
+    // Helpers
+    'array' => [
+        'id' => 'array',
+        'travis' => 'com',
+        'section' => 'Helpers',
+    ],
+    'inflector' => [
+        'id' => 'inflector',
+        'travis' => 'com',
+        'section' => 'Helpers',
+    ],
+    'string' => [
+        'id' => 'string',
+        'travis' => 'com',
+        'section' => 'Helpers',
+    ],
+
     // DB
     'db' => [
         'id' => 'db',

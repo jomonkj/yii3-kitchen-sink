@@ -3,7 +3,7 @@
 /** @var $this yii\web\View */
 /** @var ActiveDataProvider $dataProvider */
 
-use idk\app\helpers\Html;
+use app\helpers\Html;
 use yii\activerecord\data\ActiveDataProvider;
 use yii\dataview\GridView;
 

@@ -5,6 +5,7 @@ return [
         'basePath' => dirname(__DIR__) . '/src',
         'aliases' => [
             '@app' => dirname(__DIR__),
+            '@github' => dirname(__DIR__) . '/runtime/github',
             '@vendor' => dirname(__DIR__) . '/vendor',
         ]
     ],
@@ -32,6 +33,6 @@ return [
     ],
     'user' => [
         '__class' => yii\web\User::class,
-        'identityClass' => \idk\app\models\User::class,
+        'identityClass' => \app\models\User::class,
     ],
 ];

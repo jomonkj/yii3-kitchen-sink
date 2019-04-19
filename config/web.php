@@ -3,7 +3,7 @@
 return [
     'app' => [
         'name' => 'Yii3 Kitchen Sink',
-        'controllerNamespace' => idk\app\controllers::class,
+        'controllerNamespace' => '\app\controllers',
         'aliases' => [
             '@webroot' => __DIR__ . '/../public',
             '@doc' => __DIR__ . '/../docs',
@@ -20,11 +20,14 @@ return [
         ]
     ],
     'view' => [
-        '__class' => idk\app\components\View::class,
+        '__class' => app\components\View::class,
 
     ],
     'urlManager' => [
         'enablePrettyUrl' => true,
         'showScriptName' => false,
+        'rules' => [
+            'site/packages/<package:[-\w]+>' => 'site/package',
+        ]
     ],
 ];
