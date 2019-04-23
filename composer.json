@@ -43,7 +43,8 @@
         "yiisoft/rbac": "^3.0@dev",
         "yiisoft/log-target-file": "^3.0@dev",
         "cebe/markdown": "^1.2@dev",
-      "ext-json": "*"
+      "ext-json": "*",
+      "ext-simplexml": "*"
     },
     "require-dev": {
         "hiqdev/composer-config-plugin": "^1.0@dev",

@@ -23,17 +23,18 @@ $this->params['breadcrumbs'][] = $id;
 
 <?= Html::travisBadge($id, $package['travis']) ?>
 
-
-
 <hr/>
+
+<?php $metricsData = \app\widgets\MetricsWidget::widget(['package' => $package, 'metrics' => $metrics, 'packageDir' => $packageDir]) ?>
 
 <?= Tabs::widget([
     'items' => [
         [
-            'label' => 'pdpend',
+            'label' => 'Metrics',
             'content' => <<<HTML
 <img src="/img/packages/$id/chart.svg"/>
 <img src="/img/packages/$id/pyramid.svg"/>
+$metricsData
 HTML
 
         ],

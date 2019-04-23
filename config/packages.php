@@ -23,26 +23,26 @@ return [
         'section' => 'Framework',
     ],
 
-    // Project template and Application bases
+    // Project & App bases
     'yii-project-template' => [
         'id' => 'yii-project-template',
         'travis' => 'org',
-        'section' => 'Project template and Application bases',
+        'section' => 'Project & App bases',
     ],
     'yii-base-api' => [
         'id' => 'yii-base-api',
         'travis' => 'com',
-        'section' => 'Project template and Application bases',
+        'section' => 'Project & App bases',
     ],
     'yii-base-cli' => [
         'id' => 'yii-base-cli',
         'travis' => 'com',
-        'section' => 'Project template and Application bases',
+        'section' => 'Project & App bases',
     ],
     'yii-base-web' => [
         'id' => 'yii-base-web',
         'travis' => 'org',
-        'section' => 'Project template and Application bases',
+        'section' => 'Project & App bases',
     ],
 
 
@@ -74,8 +74,8 @@ return [
     ],
 
     // Helpers
-    'array' => [
-        'id' => 'array',
+    'arrays' => [
+        'id' => 'arrays',
         'travis' => 'com',
         'section' => 'Helpers',
     ],
@@ -84,8 +84,8 @@ return [
         'travis' => 'com',
         'section' => 'Helpers',
     ],
-    'string' => [
-        'id' => 'string',
+    'strings' => [
+        'id' => 'strings',
         'travis' => 'com',
         'section' => 'Helpers',
     ],

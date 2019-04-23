@@ -5,7 +5,6 @@ namespace app\controllers;
 use app\helpers\DocHelper;
 use yii\db\ConnectionInterface;
 use yii\helpers\ArrayHelper;
-use yii\helpers\Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\web\Response;
@@ -68,23 +67,28 @@ class SiteController extends Controller
 
     public function actionPackage(string $package): string
     {
+        $packageDir = $this->app->getAlias("@github/$package");
         $repo = $this->app->params['packages'][$package] ?? false;
         if (!$repo) {
             throw new NotFoundHttpException("The package $package does not exist");
         }
 
+        $metrics = simplexml_load_string(file_get_contents($this->app->getAlias("@webroot/img/packages/$package/summary.xml")));
+
         try {
-            $readme = DocHelper::doc($this->app->getAlias("@github/$package/README.md"));
+            $readme = DocHelper::doc("$packageDir/README.md");
         } catch (InvalidConfigException $e) {
             $readme = 'No README.md';
         }
 
-        $composer = file_get_contents($this->app->getAlias("@github/$package/composer.json"));
+        $composer = file_get_contents("$packageDir/composer.json");
 
         return $this->render('package', [
             'package' => $repo,
             'readme' => $readme,
             'composer' => $composer,
+            'metrics' => $metrics,
+            'packageDir' => $packageDir,
         ]);
     }
 

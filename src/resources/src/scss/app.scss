@@ -27,6 +27,7 @@ $card-spacer-y: .5rem;
 $table-cell-padding: .5rem;
 $table-bg: white;
 
+$dt-font-weight: 700;
 
 
 @import "../../../../node_modules/bootstrap/scss/functions";
@@ -246,5 +247,11 @@ a.desc:after {
   .card-footer {
     background-color: transparent;
     border-top: none;
+  }
+}
+
+tr[data-idx="1"] {
+  td {
+    border-top: 1px solid lighten($primary, 30%);
   }
 }

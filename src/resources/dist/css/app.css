@@ -184,7 +184,7 @@ ul ol {
   margin-bottom: 0; }
 
 dt {
-  font-weight: 400; }
+  font-weight: 700; }
 
 dd {
   margin-bottom: .5rem;
@@ -5412,3 +5412,6 @@ a.desc:after {
   .package-card .card-footer {
     background-color: transparent;
     border-top: none; }
+
+tr[data-idx="1"] td {
+  border-top: 1px solid #cca4dc; }

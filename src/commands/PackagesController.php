@@ -2,12 +2,26 @@
 
 namespace app\commands;
 
+use Psr\Log\LoggerInterface;
 use yii\console\Controller;
 use yii\helpers\FileHelper;
+use Yii\Log\Logger;
 
 
 class PackagesController extends Controller
 {
+    private $logger;
+
+    public function __construct($id, $module, Logger $logger)
+    {
+        parent::__construct($id, $module);
+
+        $this->logger = $logger;
+
+        $this->logger->warning('yes');
+        $this->logger->flush();
+
+    }
 
     /**
      * Generates the packages dependencies graph definition file
@@ -17,6 +31,10 @@ class PackagesController extends Controller
     public function actionD3(): void
     {
         $all = [];
+
+        $this->logger->critical('yeah');
+        $this->logger->critical('no');
+
 
         $basePath = $this->app->getAlias('@runtime/github/');
 

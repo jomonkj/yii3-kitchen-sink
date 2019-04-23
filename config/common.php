@@ -7,6 +7,7 @@ return [
             '@app' => dirname(__DIR__),
             '@github' => dirname(__DIR__) . '/runtime/github',
             '@vendor' => dirname(__DIR__) . '/vendor',
+            '@runtime' => dirname(__DIR__) . '/runtime',
         ]
     ],
     'db' => [
@@ -16,14 +17,6 @@ return [
             . (!empty($params['db.port']) ? (';port=' . $params['db.port']) : ''),
         'username'  => $params['db.user'],
         'password'  => $params['db.password'],
-    ],
-    'logger' => [
-        '__class' => \Yii\Log\Logger::class,
-        '__construct()' => [
-            'targets' => [
-                \Yii\Log\FileTarget::class,
-            ],
-        ],
     ],
     'cache' => [
         '__class' => \yii\cache\Cache::class,
