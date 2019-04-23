@@ -143,7 +143,27 @@ return [
     ],
 
 
-
+    // I18N
+    'i18n' => [
+        'id' => 'i18n',
+        'travis' => 'com',
+        'section' => 'Internationalization',
+    ],
+    'i18n-formatter-intl' => [
+        'id' => 'i18n-formatter-intl',
+        'travis' => 'com',
+        'section' => 'Internationalization',
+    ],
+    'i18n-message-gettext' => [
+        'id' => 'i18n-message-gettext',
+        'travis' => 'com',
+        'section' => 'Internationalization',
+    ],
+    'i18n-message-php' => [
+        'id' => 'i18n-message-php',
+        'travis' => 'com',
+        'section' => 'Internationalization',
+    ],
 
     // Log
     'log' => [
