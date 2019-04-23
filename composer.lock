@@ -3030,12 +3030,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii-debug.git",
-                "reference": "9cb34d0479b5dae69fd2d79b5d9f05fb6cfbdf8d"
+                "reference": "164a1be961974ceee33768b8580de25b9a939419"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii-debug/zipball/9cb34d0479b5dae69fd2d79b5d9f05fb6cfbdf8d",
-                "reference": "9cb34d0479b5dae69fd2d79b5d9f05fb6cfbdf8d",
+                "url": "https://api.github.com/repos/yiisoft/yii-debug/zipball/164a1be961974ceee33768b8580de25b9a939419",
+                "reference": "164a1be961974ceee33768b8580de25b9a939419",
                 "shasum": ""
             },
             "require": {
@@ -3088,7 +3088,7 @@
                 "debugger",
                 "yii"
             ],
-            "time": "2019-04-23T14:59:10+00:00"
+            "time": "2019-04-23T15:13:32+00:00"
         }
     ],
     "aliases": [],
