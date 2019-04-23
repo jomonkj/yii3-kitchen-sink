@@ -1130,22 +1130,22 @@
             "time": "2019-03-24T20:21:23+00:00"
         },
         {
-            "name": "yiisoft/array",
+            "name": "yiisoft/arrays",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/yiisoft/array.git",
-                "reference": "7cddd824a537b6704b1be9b94e11ceda31505962"
+                "url": "https://github.com/yiisoft/arrays.git",
+                "reference": "e85198be1f576b2d01018302bb81e199d64b65c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/array/zipball/7cddd824a537b6704b1be9b94e11ceda31505962",
-                "reference": "7cddd824a537b6704b1be9b94e11ceda31505962",
+                "url": "https://api.github.com/repos/yiisoft/arrays/zipball/e85198be1f576b2d01018302bb81e199d64b65c7",
+                "reference": "e85198be1f576b2d01018302bb81e199d64b65c7",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2",
-                "yiisoft/string": "^3.0@dev"
+                "yiisoft/strings": "^3.0@dev"
             },
             "require-dev": {
                 "phpunit/phpunit": "^7.2"
@@ -1158,7 +1158,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Yii\\Helpers\\": "src"
+                    "Yiisoft\\Arrays\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1184,7 +1184,7 @@
                 "helper",
                 "yii"
             ],
-            "time": "2019-04-18T13:06:54+00:00"
+            "time": "2019-04-23T08:37:51+00:00"
         },
         {
             "name": "yiisoft/cache",
@@ -1870,17 +1870,17 @@
             "time": "2019-04-16T18:43:54+00:00"
         },
         {
-            "name": "yiisoft/string",
+            "name": "yiisoft/strings",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/yiisoft/string.git",
-                "reference": "4dcf7f29a7d5236ec438c4711d21cb1e3ca12fa2"
+                "url": "https://github.com/yiisoft/strings.git",
+                "reference": "35830637a56d72e9e62e5ae9817bffef35107a19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/string/zipball/4dcf7f29a7d5236ec438c4711d21cb1e3ca12fa2",
-                "reference": "4dcf7f29a7d5236ec438c4711d21cb1e3ca12fa2",
+                "url": "https://api.github.com/repos/yiisoft/strings/zipball/35830637a56d72e9e62e5ae9817bffef35107a19",
+                "reference": "35830637a56d72e9e62e5ae9817bffef35107a19",
                 "shasum": ""
             },
             "require": {
@@ -1898,7 +1898,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Yii\\Helpers\\": "src"
+                    "Yiisoft\\Strings\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1926,7 +1926,7 @@
                 "string",
                 "yii"
             ],
-            "time": "2019-04-18T12:48:09+00:00"
+            "time": "2019-04-23T08:32:04+00:00"
         },
         {
             "name": "yiisoft/view",
@@ -2039,16 +2039,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii-bootstrap4.git",
-                "reference": "e7737a0a000d3b66711ae8cdee659ffd0f7c3206"
+                "reference": "b0ac494d9351c736f61b40106f87ea762d477de3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii-bootstrap4/zipball/e7737a0a000d3b66711ae8cdee659ffd0f7c3206",
-                "reference": "e7737a0a000d3b66711ae8cdee659ffd0f7c3206",
+                "url": "https://api.github.com/repos/yiisoft/yii-bootstrap4/zipball/b0ac494d9351c736f61b40106f87ea762d477de3",
+                "reference": "b0ac494d9351c736f61b40106f87ea762d477de3",
                 "shasum": ""
             },
             "require": {
-                "yiisoft/array": "^3.0@dev",
+                "yiisoft/arrays": "^3.0@dev",
                 "yiisoft/di": "^3.0@dev",
                 "yiisoft/yii-core": "^3.0@dev"
             },
@@ -2112,7 +2112,7 @@
                 "bootstrap",
                 "yii"
             ],
-            "time": "2019-04-19T12:44:48+00:00"
+            "time": "2019-04-23T14:31:06+00:00"
         },
         {
             "name": "yiisoft/yii-console",
@@ -2962,20 +2962,88 @@
             "time": "2013-05-15T18:04:27+00:00"
         },
         {
+            "name": "yiisoft/inflector",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/inflector.git",
+                "reference": "be7220e4108136ef43dda0486f04551a578ef37e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/inflector/zipball/be7220e4108136ef43dda0486f04551a578ef37e",
+                "reference": "be7220e4108136ef43dda0486f04551a578ef37e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": "^7.2",
+                "yiisoft/strings": "^3.0@dev"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.2"
+            },
+            "suggest": {
+                "ext-intl": "PHP Internationalization extension"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Yiisoft\\Helpers\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Makarov",
+                    "email": "sam@rmcreative.ru",
+                    "homepage": "http://rmcreative.ru/",
+                    "role": "Core framework development"
+                },
+                {
+                    "name": "Antonio Ramirez",
+                    "email": "amigo.cobos@gmail.com",
+                    "homepage": "http://www.2amigos.us/",
+                    "role": "Core framework development"
+                }
+            ],
+            "description": "Yii - Inflector Helper",
+            "homepage": "http://www.yiiframework.com/",
+            "keywords": [
+                "helper",
+                "inflector",
+                "yii"
+            ],
+            "time": "2019-04-23T11:40:09+00:00"
+        },
+        {
             "name": "yiisoft/yii-debug",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii-debug.git",
-                "reference": "4b3797a193f5cac5fbf31447a822b711f0495e97"
+                "reference": "9cb34d0479b5dae69fd2d79b5d9f05fb6cfbdf8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii-debug/zipball/4b3797a193f5cac5fbf31447a822b711f0495e97",
-                "reference": "4b3797a193f5cac5fbf31447a822b711f0495e97",
+                "url": "https://api.github.com/repos/yiisoft/yii-debug/zipball/9cb34d0479b5dae69fd2d79b5d9f05fb6cfbdf8d",
+                "reference": "9cb34d0479b5dae69fd2d79b5d9f05fb6cfbdf8d",
                 "shasum": ""
             },
             "require": {
+                "ext-mbstring": "*",
+                "psr/log": "^1.1",
+                "yiisoft/arrays": "^3.0@dev",
+                "yiisoft/inflector": "^3.0@dev",
+                "yiisoft/strings": "^3.0@dev",
                 "yiisoft/yii-core": "^3.0@dev",
                 "yiisoft/yii-dataview": "^3.0@dev"
             },
@@ -3001,7 +3069,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "yii\\debug\\": "src"
+                    "Yiisoft\\Debug\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3020,7 +3088,7 @@
                 "debugger",
                 "yii"
             ],
-            "time": "2019-04-15T19:37:49+00:00"
+            "time": "2019-04-23T14:59:10+00:00"
         }
     ],
     "aliases": [],
