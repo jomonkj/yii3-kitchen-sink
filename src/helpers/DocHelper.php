@@ -2,7 +2,7 @@
 
 namespace app\helpers;
 
-use yii\helpers\Inflector;
+use Yiisoft\Helpers\InflectorHelper;
 use yii\exceptions\InvalidConfigException;
 use yii\helpers\Html;
 use yii\helpers\Url;
@@ -39,7 +39,7 @@ class DocHelper
 
         $html = preg_replace_callback( '/(\<h[1-6](.*?))\>(.*)(<\/h[1-6]>)/i', static function($matches ) {
             if (  stripos( $matches[0], 'id=' ) === false) :
-                $matches[0] = $matches[1] . $matches[2] . ' id="' . Inflector::slug( $matches[3] ) . '">' . $matches[3] . $matches[4];
+                $matches[0] = $matches[1] . $matches[2] . ' id="' . InflectorHelper::slug( $matches[3] ) . '">' . $matches[3] . $matches[4];
             endif;
             return $matches[0];
         }, $html );

@@ -2,6 +2,7 @@
 
 use app\assets\DependencyGraphAsset;
 use app\helpers\Html;
+use Yiisoft\Helpers\InflectorHelper;
 
 /** @var array $sections */
 /** @var string $title */
@@ -20,7 +21,7 @@ DependencyGraphAsset::register($this);
             <h1>Yii 3 packages</h1>
             <table class="table">
                 <?php foreach ($sections as $section => $packages): ?>
-                    <tr id="<?= \yii\helpers\Inflector::slug($section) ?>" class="section">
+                    <tr id="<?= InflectorHelper::slug($section) ?>" class="section">
                         <th colspan="2"><?= $section ?></th>
                         <th></th>
                     </tr>
@@ -45,7 +46,7 @@ DependencyGraphAsset::register($this);
 
                 <nav id="doc-menu" class="nav doc-menu flex-column sticky">
 <?php foreach ($sections as $section => $packages): ?>
-                    <a class="nav-link scrollto" href="#<?= \yii\helpers\Inflector::slug($section) ?>"><?= $section ?></a>
+                    <a class="nav-link scrollto" href="#<?=InflectorHelper::slug($section) ?>"><?= $section ?></a>
 <?php endforeach; ?>
                 </nav><!--//doc-menu-->
             </div>

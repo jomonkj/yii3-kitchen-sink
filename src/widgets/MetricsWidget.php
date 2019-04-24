@@ -2,7 +2,7 @@
 
 namespace app\widgets;
 
-use yii\bootstrap4\Widget;
+use Yiisoft\Yii\Bootstrap4\Widget;
 
 class MetricsWidget extends Widget
 {

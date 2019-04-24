@@ -4,7 +4,7 @@ namespace app\controllers;
 
 use app\helpers\DocHelper;
 use yii\db\ConnectionInterface;
-use yii\helpers\ArrayHelper;
+use Yiisoft\Arrays\ArrayHelper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\web\Response;

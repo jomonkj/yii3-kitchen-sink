@@ -1,9 +1,9 @@
 <?php
 
 use app\assets\AppAsset;
-use yii\bootstrap4\Nav;
-use yii\bootstrap4\NavBar;
-use yii\bootstrap4\Breadcrumbs;
+use Yiisoft\Yii\Bootstrap4\Nav;
+use Yiisoft\Yii\Bootstrap4\NavBar;
+use Yiisoft\Yii\Bootstrap4\Breadcrumbs;
 use yii\web\View;
 
 /* @var $this View */

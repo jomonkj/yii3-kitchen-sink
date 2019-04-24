@@ -1,7 +1,7 @@
 <?php
 
 use app\helpers\Html;
-use yii\bootstrap4\Tabs;
+use Yiisoft\Yii\Bootstrap4\Tabs;
 
 /** @var array $package */
 /** @var string $readme */

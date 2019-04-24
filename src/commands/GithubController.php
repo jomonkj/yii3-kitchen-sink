@@ -52,7 +52,9 @@ class GithubController extends Controller
         }
 
         foreach ($packages as $package) {
+            echo "pulling $package\n";
             chdir($this->workDir . '/' . $package);
+            echo $this->git('checkout .') . "\n";
             echo $this->git('pull') . "\n";
         }
 

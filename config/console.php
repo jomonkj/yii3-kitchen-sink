@@ -10,11 +10,13 @@ return [
     ],
     'logger' => [
         '__class' => \Yii\Log\Logger::class,
-        '__construct()' => [
-            [
-                'file-target' => \yii\di\Reference::to('file-target'),
-            ]
-        ]
+        '__construct()' => function() {
+            return [
+                [
+                    'file' => new \Yii\Log\FileTarget("/tmp/log.txt"),
+                ]
+            ];
+        }
     ],
 
 ];

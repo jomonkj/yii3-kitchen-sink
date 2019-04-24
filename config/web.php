@@ -14,7 +14,7 @@ return [
         'appendTimestamp' => true,
         'linkAssets' => true,
         'bundles' => [
-        \yii\bootstrap4\BootstrapAsset::class => [
+        \Yiisoft\Yii\Bootstrap4\BootstrapAsset::class => [
                 'css' => [],
             ]
         ]
