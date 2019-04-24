@@ -5,6 +5,7 @@ use app\helpers\Html;
 use Yiisoft\Helpers\InflectorHelper;
 
 /** @var array $sections */
+/** @var array $allComposer */
 /** @var string $title */
 /** @var string $subTitle */
 /** @var bool $hasDependencies */
@@ -32,6 +33,10 @@ DependencyGraphAsset::register($this);
                             </td>
                             <td>
                                 <?= Html::a($package, ['site/package', 'package' => $package]) ?>
+                            </td>
+                            <td>
+                                <?php $ns = key($allComposer[$package]['autoload']['psr-4'] ?? []) ?>
+                                <?= strpos($ns, 'Yiisoft') === 0 ? rtrim($ns, '\\') : '<span style="color: var(--red);">' . rtrim($ns, '\\') . '</span>' ?>
                             </td>
                             <td>
                                 <?= Html::travisBadge($package, $infos['travis']) ?>

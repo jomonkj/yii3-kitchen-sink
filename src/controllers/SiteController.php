@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\helpers\DocHelper;
 use yii\db\ConnectionInterface;
+use yii\helpers\Json;
 use Yiisoft\Arrays\ArrayHelper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -51,9 +52,9 @@ class SiteController extends Controller
 
     public function actionPackages()
     {
-
         $sections = ArrayHelper::index($this->app->params['packages'], 'id', 'section');
         $dependenciesFile = $this->app->getAlias('@runtime/github/dependencies.json');
+        $allComposer = Json::decode(file_get_contents($this->app->getAlias('@runtime/github/allComposer.json')));
 
         $hasDependencies = file_exists($dependenciesFile);
 
@@ -62,6 +63,7 @@ class SiteController extends Controller
             'subTitle' => 'How was Yii 2 split into several packages',
             'sections' => $sections,
             'hasDependencies' => $hasDependencies,
+            'allComposer' => $allComposer,
         ]);
     }
 

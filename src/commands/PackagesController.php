@@ -2,26 +2,13 @@
 
 namespace app\commands;
 
-use Psr\Log\LoggerInterface;
 use yii\console\Controller;
 use yii\helpers\FileHelper;
-use Yii\Log\Logger;
+use yii\helpers\Json;
 
 
 class PackagesController extends Controller
 {
-    private $logger;
-
-    public function __construct($id, $module, Logger $logger)
-    {
-        parent::__construct($id, $module);
-
-        $this->logger = $logger;
-
-        $this->logger->warning('yes');
-        $this->logger->flush();
-
-    }
 
     /**
      * Generates the packages dependencies graph definition file
@@ -31,10 +18,6 @@ class PackagesController extends Controller
     public function actionD3(): void
     {
         $all = [];
-
-        $this->logger->critical('yeah');
-        $this->logger->critical('no');
-
 
         $basePath = $this->app->getAlias('@runtime/github/');
 
@@ -85,6 +68,26 @@ class PackagesController extends Controller
             $cmd = "php vendor/bin/graph-composer export --no-dev runtime/github/$id public/img/dependencies/$id-nodev.svg";
             exec($cmd);
         }
+    }
+
+    /**
+     * Concat all composer.json for packages
+     */
+    public function actionConcat(): void
+    {
+        $basePath = $this->app->getAlias('@runtime/github/');
+
+        $packages = [];
+        foreach ($this->app->params['packages'] as $id => $info) {
+            $composer = $basePath . $id  . '/composer.json';
+            if (file_exists($composer))  {
+                $packages[$id] = Json::decode(file_get_contents($composer));
+            } else {
+                $packages[$id] = false;
+            }
+        }
+
+        file_put_contents($basePath . 'allComposer.json', Json::encode($packages));
     }
 
     public function actionPdepend(): void

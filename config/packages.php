@@ -62,15 +62,18 @@ return [
         'travis' => 'org',
         'section' => 'Libraries',
     ],
-    'rbac' => [
-        'id' => 'rbac',
-        'travis' => 'org',
-        'section' => 'Libraries',
-    ],
     'view' => [
         'id' => 'view',
         'travis' => 'org',
         'section' => 'Libraries',
+    ],
+
+
+    // RBAC
+    'rbac' => [
+        'id' => 'rbac',
+        'travis' => 'org',
+        'section' => 'RBAC',
     ],
 
     // Helpers
