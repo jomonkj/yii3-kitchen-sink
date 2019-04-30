@@ -55,7 +55,29 @@ class GithubController extends Controller
             echo "pulling $package\n";
             chdir($this->workDir . '/' . $package);
             echo $this->git('checkout .') . "\n";
+            echo $this->git('checkout master') . "\n";
             echo $this->git('pull') . "\n";
+        }
+
+        return ExitCode::OK;
+    }
+
+    /**
+     *
+     */
+    public function actionStatus(array $packages = [])
+    {
+        if (empty($packages)) {
+            $packages = array_keys($this->app->params['packages']);
+        }
+
+        foreach ($packages as $package) {
+            chdir($this->workDir . '/' . $package);
+            $status =  trim($this->git('status'));
+
+            if ($status !== 'nothing to commit, working tree clean') {
+                echo "$package has changes\n";
+            }
         }
 
         return ExitCode::OK;
