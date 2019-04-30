@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9477ef3ee58e290918ba4c50060eefe0",
+    "content-hash": "a5543b82e5788f526548a3c73095c992",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -3055,17 +3055,55 @@
             "time": "2013-05-15T18:04:27+00:00"
         },
         {
+            "name": "phpspec/php-diff",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpspec/php-diff.git",
+                "reference": "0464787bfa7cd13576c5a1e318709768798bec6a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpspec/php-diff/zipball/0464787bfa7cd13576c5a1e318709768798bec6a",
+                "reference": "0464787bfa7cd13576c5a1e318709768798bec6a",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Diff": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Boulton",
+                    "homepage": "http://github.com/chrisboulton"
+                }
+            ],
+            "description": "A comprehensive library for generating differences between two hashable objects (strings or arrays).",
+            "time": "2016-04-07T12:29:16+00:00"
+        },
+        {
             "name": "yiisoft/yii-debug",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii-debug.git",
-                "reference": "ad4ed5e87c1b42a109de047dffc3d1c849554eb5"
+                "reference": "e1009fa50003d9813b92b0c254ec527828ccf394"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii-debug/zipball/ad4ed5e87c1b42a109de047dffc3d1c849554eb5",
-                "reference": "ad4ed5e87c1b42a109de047dffc3d1c849554eb5",
+                "url": "https://api.github.com/repos/yiisoft/yii-debug/zipball/e1009fa50003d9813b92b0c254ec527828ccf394",
+                "reference": "e1009fa50003d9813b92b0c254ec527828ccf394",
                 "shasum": ""
             },
             "require": {
@@ -3117,7 +3155,72 @@
                 "debugger",
                 "yii"
             ],
-            "time": "2019-04-30T10:59:32+00:00"
+            "time": "2019-04-30T15:17:04+00:00"
+        },
+        {
+            "name": "yiisoft/yii-gii",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii-gii.git",
+                "reference": "e203b8fa1b4602ef7b97e4b6ecd5758ab5802c30"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii-gii/zipball/e203b8fa1b4602ef7b97e4b6ecd5758ab5802c30",
+                "reference": "e203b8fa1b4602ef7b97e4b6ecd5758ab5802c30",
+                "shasum": ""
+            },
+            "require": {
+                "phpspec/php-diff": "^1.1.0",
+                "yiisoft/inflector": "^3.0@dev",
+                "yiisoft/strings": "^3.0@dev",
+                "yiisoft/yii-core": "^3.0@dev"
+            },
+            "require-dev": {
+                "hiqdev/composer-config-plugin": "^1.0@dev",
+                "phpunit/phpunit": "^7.3",
+                "yiisoft/active-record": "^3.0@dev",
+                "yiisoft/cache": "^3.0@dev",
+                "yiisoft/db": "^3.0@dev",
+                "yiisoft/db-pgsql": "^3.0@dev",
+                "yiisoft/db-sqlite": "^3.0@dev",
+                "yiisoft/di": "^3.0@dev",
+                "yiisoft/log": "^3.0@dev",
+                "yiisoft/view": "^3.0@dev",
+                "yiisoft/yii-web": "^3.0@dev"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                },
+                "config-plugin": {
+                    "tests": "config/tests.php"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Yiisoft\\Yii\\Gii\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Qiang Xue",
+                    "email": "qiang.xue@gmail.com"
+                }
+            ],
+            "description": "Yii Framework Code Generator Extension",
+            "keywords": [
+                "code generator",
+                "gii",
+                "yii"
+            ],
+            "time": "2019-04-30T17:37:38+00:00"
         }
     ],
     "aliases": [],
@@ -3146,7 +3249,8 @@
         "cebe/markdown": 20,
         "hiqdev/composer-config-plugin": 20,
         "clue/graph-composer": 20,
-        "yiisoft/yii-debug": 20
+        "yiisoft/yii-debug": 20,
+        "yiisoft/yii-gii": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -3,8 +3,8 @@
 namespace app\commands;
 
 use yii\base\Action;
-use yii\console\Controller;
-use yii\console\ExitCode;
+use Yiisoft\Yii\Console\Controller;
+use Yiisoft\Yii\Console\ExitCode;
 use yii\helpers\FileHelper;
 use yii\helpers\Console;
 

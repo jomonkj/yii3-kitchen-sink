@@ -2,7 +2,7 @@
 
 namespace app\commands;
 
-use yii\console\Controller;
+use Yiisoft\Yii\Console\Controller;
 use yii\helpers\FileHelper;
 use yii\helpers\Json;
 
