@@ -2,7 +2,7 @@
 
 use app\assets\DependencyGraphAsset;
 use app\helpers\Html;
-use Yiisoft\Helpers\InflectorHelper;
+use Yiisoft\Inflector\InflectorHelper;
 
 /** @var array $sections */
 /** @var array $allComposer */

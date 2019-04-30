@@ -2,7 +2,7 @@
 
 namespace app\helpers;
 
-use Yiisoft\Helpers\InflectorHelper;
+use Yiisoft\Inflector\InflectorHelper;
 use yii\exceptions\InvalidConfigException;
 use yii\helpers\Html;
 use yii\helpers\Url;
