@@ -19,9 +19,9 @@ return [
         'password'  => $params['db.password'],
     ],
     'cache' => [
-        '__class' => \yii\cache\Cache::class,
+        '__class' => \Yiisoft\Cache\Cache::class,
         '__construct()' => [
-               '__class' => yii\cache\ArrayCache::class,
+               '__class' => Yiisoft\Cache\ArrayCache::class,
            ],
     ],
     'user' => [

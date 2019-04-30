@@ -2,7 +2,7 @@
 
 namespace app\assets;
 
-use yii\jquery\JqueryAsset;
+use Yiisoft\Yii\JQuery\JqueryAsset;
 use yii\web\AssetBundle;
 
 class AppAsset extends AssetBundle
