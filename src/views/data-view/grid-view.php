@@ -5,7 +5,7 @@
 
 use app\helpers\Html;
 use yii\activerecord\data\ActiveDataProvider;
-use yii\dataview\GridView;
+use Yiisoft\Yii\DataView\GridView;
 
 $this->title = 'yiisoft/yii-dataview';
 $this->subTitle = 'GridView, ListView, DetailView';
@@ -19,15 +19,17 @@ $this->subTitle = 'GridView, ListView, DetailView';
             'dataProvider' => $dataProvider,
             'columns' => [
                 'github' => [
+                    'label' => '&nbsp;',
+                    'encodeLabel' => false,
                     'format' => 'html',
-                    'value' => function ($model) {
+                    'value' => static function ($model) {
                         return Html::a(Html::o('mark-github'), 'https://github.com/yiisoft/' . $model['id']);
                     }],
                 'id:text:Package name',
                 [
                     'label' => 'Build status',
                     'format' => 'html',
-                    'value' => function ($model) {
+                    'value' => static function ($model) {
                         $link = "https://travis-ci.{$model['travis']}/yiisoft/{$model['id']}";
                         return Html::a(Html::img($link . '.svg?branch=master'), $link);
                     }

@@ -7,7 +7,7 @@ $this->title = 'yiisoft/yii-dataview';
 $this->subTitle = 'GridView, ListView, DetailView';
 
 use yii\activerecord\data\ActiveDataProvider;
-use yii\dataview\ListView; ?>
+use Yiisoft\Yii\DataView\ListView; ?>
 
 <div class="card-group">
 <?= ListView::widget([

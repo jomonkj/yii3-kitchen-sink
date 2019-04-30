@@ -2315,12 +2315,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii-core.git",
-                "reference": "ca95dc2df467e15f3e5dd817c8d8872d104f4ab7"
+                "reference": "702c0f1cff58a49e06e29f8e1de55d3e2b943c50"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii-core/zipball/ca95dc2df467e15f3e5dd817c8d8872d104f4ab7",
-                "reference": "ca95dc2df467e15f3e5dd817c8d8872d104f4ab7",
+                "url": "https://api.github.com/repos/yiisoft/yii-core/zipball/702c0f1cff58a49e06e29f8e1de55d3e2b943c50",
+                "reference": "702c0f1cff58a49e06e29f8e1de55d3e2b943c50",
                 "shasum": ""
             },
             "require": {
@@ -2448,7 +2448,7 @@
                 "framework",
                 "yii"
             ],
-            "time": "2019-04-30T15:02:30+00:00"
+            "time": "2019-04-30T18:28:45+00:00"
         },
         {
             "name": "yiisoft/yii-dataview",
@@ -2456,12 +2456,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii-dataview.git",
-                "reference": "048e7e76a441e39362b9a5d21b2ec45b4cc72ba1"
+                "reference": "620aa487c4e9966a59ee3dd95949118921fdb106"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii-dataview/zipball/048e7e76a441e39362b9a5d21b2ec45b4cc72ba1",
-                "reference": "048e7e76a441e39362b9a5d21b2ec45b4cc72ba1",
+                "url": "https://api.github.com/repos/yiisoft/yii-dataview/zipball/620aa487c4e9966a59ee3dd95949118921fdb106",
+                "reference": "620aa487c4e9966a59ee3dd95949118921fdb106",
                 "shasum": ""
             },
             "require": {
@@ -2490,7 +2490,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "yii\\dataview\\": "src"
+                    "Yiisoft\\Yii\\DataView\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2550,7 +2550,7 @@
                 "view",
                 "yii"
             ],
-            "time": "2019-04-30T10:59:03+00:00"
+            "time": "2019-04-30T18:30:04+00:00"
         },
         {
             "name": "yiisoft/yii-jquery",
