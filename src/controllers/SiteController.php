@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\helpers\DocHelper;
+use app\models\Package;
 use yii\db\ConnectionInterface;
 use yii\helpers\Json;
 use Yiisoft\Arrays\ArrayHelper;
@@ -15,9 +16,9 @@ class SiteController extends Controller
 {
     private $db;
 
-    public function __construct($id, $module, ConnectionInterface $db)
+    public function __construct($id, $module, Response $response, ConnectionInterface $db)
     {
-        parent::__construct($id, $module);
+        parent::__construct($id, $module, $response);
         $this->db = $db;
     }
 
@@ -52,7 +53,9 @@ class SiteController extends Controller
 
     public function actionPackages()
     {
-        $sections = ArrayHelper::index($this->app->params['packages'], 'id', 'section');
+        $packages = Package::find()->all();
+
+        $sections = ArrayHelper::index($packages, 'id', 'section');
         $dependenciesFile = $this->app->getAlias('@runtime/github/dependencies.json');
         $allComposer = Json::decode(file_get_contents($this->app->getAlias('@runtime/github/allComposer.json')));
 

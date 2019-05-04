@@ -26,20 +26,20 @@ DependencyGraphAsset::register($this);
                         <th colspan="2"><?= $section ?></th>
                         <th></th>
                     </tr>
-                    <?php foreach ($packages as $package => $infos): ?>
+                    <?php foreach ($packages as $package): ?>
                         <tr>
                             <td style="width: 1px;">
-                                <?= Html::a(Html::o('mark-github'), 'https://github.com/yiisoft/' . $package, ['class' => 'float-right']) ?>
+                                <?= Html::a(Html::o('mark-github'), 'https://github.com/yiisoft/' . $package->name, ['class' => 'float-right']) ?>
                             </td>
                             <td>
-                                <?= Html::a($package, ['site/package', 'package' => $package]) ?>
+                                <?= Html::a($package->name, ['site/package', 'package' => $package->name]) ?>
                             </td>
                             <td>
-                                <?php $ns = key($allComposer[$package]['autoload']['psr-4'] ?? []) ?>
+                                <?php $ns = key($allComposer[$package->name]['autoload']['psr-4'] ?? []) ?>
                                 <?= strpos($ns, 'Yiisoft') === 0 ? rtrim($ns, '\\') : '<span style="color: var(--red);">' . rtrim($ns, '\\') . '</span>' ?>
                             </td>
                             <td>
-                                <?= Html::travisBadge($package, $infos['travis']) ?>
+                                <?= Html::travisBadge($package->name, $package->travis) ?>
                             </td>
                         </tr>
                     <?php endforeach ?>
