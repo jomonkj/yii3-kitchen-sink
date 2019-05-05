@@ -863,12 +863,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "8296e713485869de38a5f55ce2cce9a12fd107ad"
+                "reference": "2fd2ecf7913fb96f0c2e941ca15bb702184c6574"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/8296e713485869de38a5f55ce2cce9a12fd107ad",
-                "reference": "8296e713485869de38a5f55ce2cce9a12fd107ad",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/2fd2ecf7913fb96f0c2e941ca15bb702184c6574",
+                "reference": "2fd2ecf7913fb96f0c2e941ca15bb702184c6574",
                 "shasum": ""
             },
             "require": {
@@ -931,7 +931,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2019-04-18T06:55:47+00:00"
+            "time": "2019-05-01T12:55:49+00:00"
         },
         {
             "name": "theseer/fdomdocument",
@@ -1030,12 +1030,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/active-record.git",
-                "reference": "3e92f61727b5fb333d273723e7d13c223a455ce6"
+                "reference": "8bff7525e19849e355c7b651823534e46ef90fd2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/active-record/zipball/3e92f61727b5fb333d273723e7d13c223a455ce6",
-                "reference": "3e92f61727b5fb333d273723e7d13c223a455ce6",
+                "url": "https://api.github.com/repos/yiisoft/active-record/zipball/8bff7525e19849e355c7b651823534e46ef90fd2",
+                "reference": "8bff7525e19849e355c7b651823534e46ef90fd2",
                 "shasum": ""
             },
             "require": {
@@ -1069,8 +1069,8 @@
             },
             "autoload": {
                 "psr-4": {
-                    "yii\\activerecord\\": "src",
-                    "yii\\activerecord\\tests\\": "tests"
+                    "Yiisoft\\ActiveRecord\\": "src",
+                    "Yiisoft\\ActiveRecord\\Tests\\": "tests"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1130,7 +1130,7 @@
                 "Active Record",
                 "yii"
             ],
-            "time": "2019-04-30T10:58:08+00:00"
+            "time": "2019-05-05T12:47:00+00:00"
         },
         {
             "name": "yiisoft/arrays",
@@ -1195,12 +1195,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/cache.git",
-                "reference": "5a9a6063dd35a8309286e825ba7c2ce238f29101"
+                "reference": "d3ffe8436270481e34842705817a5cf8025d947f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/cache/zipball/5a9a6063dd35a8309286e825ba7c2ce238f29101",
-                "reference": "5a9a6063dd35a8309286e825ba7c2ce238f29101",
+                "url": "https://api.github.com/repos/yiisoft/cache/zipball/d3ffe8436270481e34842705817a5cf8025d947f",
+                "reference": "d3ffe8436270481e34842705817a5cf8025d947f",
                 "shasum": ""
             },
             "require": {
@@ -1302,7 +1302,7 @@
                 "cache",
                 "yii"
             ],
-            "time": "2019-04-30T12:36:20+00:00"
+            "time": "2019-05-05T12:52:54+00:00"
         },
         {
             "name": "yiisoft/db",
@@ -1310,12 +1310,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/db.git",
-                "reference": "2fe2f65e1dfe71ad67629c44d4e40857367f745b"
+                "reference": "12d07c718e73536d56339b4d7849f78ba8f78407"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/db/zipball/2fe2f65e1dfe71ad67629c44d4e40857367f745b",
-                "reference": "2fe2f65e1dfe71ad67629c44d4e40857367f745b",
+                "url": "https://api.github.com/repos/yiisoft/db/zipball/12d07c718e73536d56339b4d7849f78ba8f78407",
+                "reference": "12d07c718e73536d56339b4d7849f78ba8f78407",
                 "shasum": ""
             },
             "require": {
@@ -1350,8 +1350,8 @@
             },
             "autoload": {
                 "psr-4": {
-                    "yii\\db\\": "src",
-                    "yii\\db\\tests\\": "tests"
+                    "Yiisoft\\Db\\": "src",
+                    "Yiisoft\\Db\\Tests\\": "tests"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1411,7 +1411,7 @@
                 "database",
                 "yii"
             ],
-            "time": "2019-04-28T12:05:21+00:00"
+            "time": "2019-05-05T13:59:39+00:00"
         },
         {
             "name": "yiisoft/db-mysql",
@@ -1419,12 +1419,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/db-mysql.git",
-                "reference": "ac3652e56e19b0118985b9aae75cedb9036d69b5"
+                "reference": "896d9ed40912b9aa88c450503ef70add7b20da1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/db-mysql/zipball/ac3652e56e19b0118985b9aae75cedb9036d69b5",
-                "reference": "ac3652e56e19b0118985b9aae75cedb9036d69b5",
+                "url": "https://api.github.com/repos/yiisoft/db-mysql/zipball/896d9ed40912b9aa88c450503ef70add7b20da1e",
+                "reference": "896d9ed40912b9aa88c450503ef70add7b20da1e",
                 "shasum": ""
             },
             "require": {
@@ -1456,7 +1456,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "yii\\db\\mysql\\": "src"
+                    "Yiisoft\\Db\\Mysql\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1516,7 +1516,7 @@
                 "mysql",
                 "yii"
             ],
-            "time": "2019-04-23T22:41:43+00:00"
+            "time": "2019-05-05T13:51:08+00:00"
         },
         {
             "name": "yiisoft/di",
@@ -1524,12 +1524,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/di.git",
-                "reference": "c89d940f4d98820f3ed538bfc21770e1215e799b"
+                "reference": "413b3042a0c1f748c979dd74caaff39405f7cc0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/di/zipball/c89d940f4d98820f3ed538bfc21770e1215e799b",
-                "reference": "c89d940f4d98820f3ed538bfc21770e1215e799b",
+                "url": "https://api.github.com/repos/yiisoft/di/zipball/413b3042a0c1f748c979dd74caaff39405f7cc0f",
+                "reference": "413b3042a0c1f748c979dd74caaff39405f7cc0f",
                 "shasum": ""
             },
             "require": {
@@ -1577,7 +1577,7 @@
                 "injection",
                 "injector"
             ],
-            "time": "2019-04-02T17:15:12+00:00"
+            "time": "2019-05-05T14:20:41+00:00"
         },
         {
             "name": "yiisoft/inflector",
@@ -1648,12 +1648,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/log.git",
-                "reference": "3d9e51210b327fe09b7e86fd2d216709b63eda21"
+                "reference": "29bb5daf6e7d70b68569d64528b6557cbfe1d88b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/log/zipball/3d9e51210b327fe09b7e86fd2d216709b63eda21",
-                "reference": "3d9e51210b327fe09b7e86fd2d216709b63eda21",
+                "url": "https://api.github.com/repos/yiisoft/log/zipball/29bb5daf6e7d70b68569d64528b6557cbfe1d88b",
+                "reference": "29bb5daf6e7d70b68569d64528b6557cbfe1d88b",
                 "shasum": ""
             },
             "require": {
@@ -1755,7 +1755,7 @@
                 "logger",
                 "yii"
             ],
-            "time": "2019-04-25T14:49:49+00:00"
+            "time": "2019-05-05T14:49:56+00:00"
         },
         {
             "name": "yiisoft/log-target-file",
@@ -1860,12 +1860,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/rbac.git",
-                "reference": "56f403da96619cab049127c231a93172736a81d6"
+                "reference": "907a86db90beaf0651ae799e2189be3550c07359"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/rbac/zipball/56f403da96619cab049127c231a93172736a81d6",
-                "reference": "56f403da96619cab049127c231a93172736a81d6",
+                "url": "https://api.github.com/repos/yiisoft/rbac/zipball/907a86db90beaf0651ae799e2189be3550c07359",
+                "reference": "907a86db90beaf0651ae799e2189be3550c07359",
                 "shasum": ""
             },
             "require": {
@@ -1945,7 +1945,7 @@
                 "rbac",
                 "yii"
             ],
-            "time": "2019-04-28T21:31:45+00:00"
+            "time": "2019-05-05T14:39:41+00:00"
         },
         {
             "name": "yiisoft/strings",
@@ -2199,12 +2199,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii-console.git",
-                "reference": "b79bac9cf76f5da7be24f08c3ac3881369e8adb0"
+                "reference": "b9fb24f8897b4389935738f63b28d82b7e25cc41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii-console/zipball/b79bac9cf76f5da7be24f08c3ac3881369e8adb0",
-                "reference": "b79bac9cf76f5da7be24f08c3ac3881369e8adb0",
+                "url": "https://api.github.com/repos/yiisoft/yii-console/zipball/b9fb24f8897b4389935738f63b28d82b7e25cc41",
+                "reference": "b9fb24f8897b4389935738f63b28d82b7e25cc41",
                 "shasum": ""
             },
             "require": {
@@ -2307,7 +2307,7 @@
                 "console",
                 "yii"
             ],
-            "time": "2019-04-30T10:54:25+00:00"
+            "time": "2019-05-05T14:24:54+00:00"
         },
         {
             "name": "yiisoft/yii-core",
@@ -2315,12 +2315,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii-core.git",
-                "reference": "702c0f1cff58a49e06e29f8e1de55d3e2b943c50"
+                "reference": "50c9eb923394c822d86bfc954cf026a7396bc95a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii-core/zipball/702c0f1cff58a49e06e29f8e1de55d3e2b943c50",
-                "reference": "702c0f1cff58a49e06e29f8e1de55d3e2b943c50",
+                "url": "https://api.github.com/repos/yiisoft/yii-core/zipball/50c9eb923394c822d86bfc954cf026a7396bc95a",
+                "reference": "50c9eb923394c822d86bfc954cf026a7396bc95a",
                 "shasum": ""
             },
             "require": {
@@ -2448,7 +2448,7 @@
                 "framework",
                 "yii"
             ],
-            "time": "2019-04-30T18:28:45+00:00"
+            "time": "2019-05-05T13:56:04+00:00"
         },
         {
             "name": "yiisoft/yii-dataview",
@@ -2456,12 +2456,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii-dataview.git",
-                "reference": "620aa487c4e9966a59ee3dd95949118921fdb106"
+                "reference": "b0c795ec8b4fb9e5c2c49960cf7ceea5590648a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii-dataview/zipball/620aa487c4e9966a59ee3dd95949118921fdb106",
-                "reference": "620aa487c4e9966a59ee3dd95949118921fdb106",
+                "url": "https://api.github.com/repos/yiisoft/yii-dataview/zipball/b0c795ec8b4fb9e5c2c49960cf7ceea5590648a3",
+                "reference": "b0c795ec8b4fb9e5c2c49960cf7ceea5590648a3",
                 "shasum": ""
             },
             "require": {
@@ -2550,7 +2550,7 @@
                 "view",
                 "yii"
             ],
-            "time": "2019-04-30T18:30:04+00:00"
+            "time": "2019-05-05T14:19:44+00:00"
         },
         {
             "name": "yiisoft/yii-jquery",
@@ -2558,12 +2558,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii-jquery.git",
-                "reference": "ab37156ca6a78da16abd799a6721c12c6788ce76"
+                "reference": "1c257928cba2b46d267e90771652abe2b0e2cfcb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii-jquery/zipball/ab37156ca6a78da16abd799a6721c12c6788ce76",
-                "reference": "ab37156ca6a78da16abd799a6721c12c6788ce76",
+                "url": "https://api.github.com/repos/yiisoft/yii-jquery/zipball/1c257928cba2b46d267e90771652abe2b0e2cfcb",
+                "reference": "1c257928cba2b46d267e90771652abe2b0e2cfcb",
                 "shasum": ""
             },
             "require": {
@@ -2623,7 +2623,7 @@
                 "jquery",
                 "yii"
             ],
-            "time": "2019-04-30T11:23:33+00:00"
+            "time": "2019-04-30T18:30:55+00:00"
         },
         {
             "name": "yiisoft/yii-web",
@@ -2631,12 +2631,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii-web.git",
-                "reference": "540a110a603e60f21f77620db1fe4c9f2d0b5b95"
+                "reference": "4647ea297ef76333d872b36757b34d34c9df273c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii-web/zipball/540a110a603e60f21f77620db1fe4c9f2d0b5b95",
-                "reference": "540a110a603e60f21f77620db1fe4c9f2d0b5b95",
+                "url": "https://api.github.com/repos/yiisoft/yii-web/zipball/4647ea297ef76333d872b36757b34d34c9df273c",
+                "reference": "4647ea297ef76333d872b36757b34d34c9df273c",
                 "shasum": ""
             },
             "require": {
@@ -2742,7 +2742,7 @@
                 "framework",
                 "yii"
             ],
-            "time": "2019-04-30T10:55:05+00:00"
+            "time": "2019-05-05T14:52:56+00:00"
         }
     ],
     "packages-dev": [
@@ -3098,12 +3098,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii-debug.git",
-                "reference": "e1009fa50003d9813b92b0c254ec527828ccf394"
+                "reference": "7123bfdd4cc1482f80aee6026248edd882881f36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii-debug/zipball/e1009fa50003d9813b92b0c254ec527828ccf394",
-                "reference": "e1009fa50003d9813b92b0c254ec527828ccf394",
+                "url": "https://api.github.com/repos/yiisoft/yii-debug/zipball/7123bfdd4cc1482f80aee6026248edd882881f36",
+                "reference": "7123bfdd4cc1482f80aee6026248edd882881f36",
                 "shasum": ""
             },
             "require": {
@@ -3131,12 +3131,13 @@
                 },
                 "config-plugin": {
                     "params": "config/params.php",
-                    "web": "config/web.php"
+                    "web": "config/web.php",
+                    "tests": "config/tests.php"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Yiisoft\\Debug\\": "src"
+                    "Yiisoft\\Yii\\Debug\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3155,7 +3156,7 @@
                 "debugger",
                 "yii"
             ],
-            "time": "2019-04-30T15:17:04+00:00"
+            "time": "2019-05-05T14:19:25+00:00"
         },
         {
             "name": "yiisoft/yii-gii",
@@ -3163,12 +3164,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii-gii.git",
-                "reference": "e203b8fa1b4602ef7b97e4b6ecd5758ab5802c30"
+                "reference": "ff25f0b5752ffd30ba6e1f9fe49b4768831f2ecf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii-gii/zipball/e203b8fa1b4602ef7b97e4b6ecd5758ab5802c30",
-                "reference": "e203b8fa1b4602ef7b97e4b6ecd5758ab5802c30",
+                "url": "https://api.github.com/repos/yiisoft/yii-gii/zipball/ff25f0b5752ffd30ba6e1f9fe49b4768831f2ecf",
+                "reference": "ff25f0b5752ffd30ba6e1f9fe49b4768831f2ecf",
                 "shasum": ""
             },
             "require": {
@@ -3220,7 +3221,7 @@
                 "gii",
                 "yii"
             ],
-            "time": "2019-04-30T17:37:38+00:00"
+            "time": "2019-05-05T12:30:01+00:00"
         }
     ],
     "aliases": [],

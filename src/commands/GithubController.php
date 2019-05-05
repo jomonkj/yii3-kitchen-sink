@@ -54,9 +54,9 @@ class GithubController extends Controller
         foreach ($packages as $package) {
             echo "pulling $package\n";
             chdir($this->workDir . '/' . $package);
-            echo $this->git('checkout .') . "\n";
-            echo $this->git('checkout master') . "\n";
-            echo $this->git('pull') . "\n";
+            echo $this->git('checkout .')[0] . "\n";
+            echo $this->git('checkout master')[0] . "\n";
+            echo $this->git('pull')[0] . "\n";
         }
 
         return ExitCode::OK;
@@ -73,10 +73,16 @@ class GithubController extends Controller
 
         foreach ($packages as $package) {
             chdir($this->workDir . '/' . $package);
-            $status =  trim($this->git('status'));
+            [$status, $out] =  $this->git('status');
+
+            $branch = str_replace('On branch ', '', $out[0]);
 
             if ($status !== 'nothing to commit, working tree clean') {
                 echo "$package has changes\n";
+            }
+
+            if ($branch !== 'master') {
+                echo "$package is on branch $branch\n";
             }
         }
 
@@ -85,7 +91,7 @@ class GithubController extends Controller
 
     private function git($command)
     {
-        return exec($this->git . ' ' . $command);
+        return [trim(exec($this->git . ' ' . $command, $out)), $out];
     }
 
 }

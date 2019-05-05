@@ -3,24 +3,15 @@
 namespace app\controllers;
 
 use app\helpers\DocHelper;
-use yii\db\ConnectionInterface;
+use yii\exceptions\InvalidConfigException;
 use yii\helpers\Json;
-use Yiisoft\Arrays\ArrayHelper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\web\Response;
-use yii\exceptions\InvalidConfigException;
+use Yiisoft\Arrays\ArrayHelper;
 
 class SiteController extends Controller
 {
-    private $db;
-
-    public function __construct($id, $module, ConnectionInterface $db)
-    {
-        parent::__construct($id, $module);
-        $this->db = $db;
-    }
-
     public function actions()
     {
         return [
