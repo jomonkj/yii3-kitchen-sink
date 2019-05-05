@@ -92,6 +92,11 @@ return [
         'travis' => 'com',
         'section' => 'Helpers',
     ],
+    'var-dumper' => [
+        'id' => 'var-dumper',
+        'travis' => 'com',
+        'section' => 'Helpers',
+    ],
 
     // DB
     'db' => [
