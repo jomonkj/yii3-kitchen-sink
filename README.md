@@ -56,6 +56,8 @@ In order to generate the dependencies graphs, you will need to:
 ./yii packages/d3
 # generate the small graphs
 ./yii packages/dependencies
+# generate pdepends files
+./yii packages/pdepends
 ```
 
 You can update your checkouts by using `./yii github/pull` before generating the graphs again.
