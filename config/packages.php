@@ -82,11 +82,6 @@ return [
         'travis' => 'com',
         'section' => 'Helpers',
     ],
-    'inflector' => [
-        'id' => 'inflector',
-        'travis' => 'com',
-        'section' => 'Helpers',
-    ],
     'strings' => [
         'id' => 'strings',
         'travis' => 'com',
