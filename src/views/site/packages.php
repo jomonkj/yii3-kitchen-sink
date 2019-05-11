@@ -33,6 +33,15 @@ DependencyGraphAsset::register($this);
                             </td>
                             <td>
                                 <?= Html::a($package, ['site/package', 'package' => $package]) ?>
+			    </td>
+			    <td>
+				<?php if (strpos($package, 'yii-') === false): ?>
+<?php foreach ($allComposer[$package]['require'] ?? [] as $requirement => $version): ?>
+   <?php if (strpos($requirement, 'yiisoft/yii-') === 0): ?>
+     <?= $requirement ?>
+<?php endif ?>   
+<?php endforeach ?>
+				<?php endif ?>
                             </td>
                             <td>
                                 <?php $ns = key($allComposer[$package]['autoload']['psr-4'] ?? []) ?>
