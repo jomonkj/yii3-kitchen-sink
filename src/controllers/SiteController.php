@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\helpers\DocHelper;
+use Psr\Log\LoggerInterface;
 use yii\exceptions\InvalidConfigException;
 use yii\helpers\Json;
 use yii\web\Controller;
@@ -12,6 +13,11 @@ use Yiisoft\Arrays\ArrayHelper;
 
 class SiteController extends Controller
 {
+    /**
+     * @var LoggerInterface
+     */
+    private $logger;
+
     public function actions()
     {
         return [
@@ -20,7 +26,13 @@ class SiteController extends Controller
             ],
         ];
     }
-    
+
+    public function __construct($id, $module, LoggerInterface $logger)
+    {
+        $this->logger = $logger;
+        parent::__construct($id, $module);
+    }
+
     public function actionIndex()
     {
         //$articles = $this->db->createCommand('SELECT count(*) FROM article')->queryScalar();
@@ -43,6 +55,7 @@ class SiteController extends Controller
 
     public function actionPackages()
     {
+        $this->logger->debug('yo');
         $sections = ArrayHelper::index($this->app->params['packages'], 'id', 'section');
         $dependenciesFile = $this->app->getAlias('@runtime/github/dependencies.json');
         $allComposer = Json::decode(file_get_contents($this->app->getAlias('@runtime/github/allComposer.json')));

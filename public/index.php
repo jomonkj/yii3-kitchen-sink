@@ -4,7 +4,7 @@ use hiqdev\composer\config\Builder;
 use yii\di\Container;
 use yii\helpers\Yii;
 
-define('YII_DEBUG', true);
+define('YII_DEBUG', false);
 
 (function () {
     require_once __DIR__ . '/../vendor/autoload.php';

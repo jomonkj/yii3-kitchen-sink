@@ -119,12 +119,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hiqdev/composer-config-plugin.git",
-                "reference": "4f8d841d57a0015af48bf6451ad3342aa56b9559"
+                "reference": "820a9e6804f8e955597d81eced85dd8d15577000"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hiqdev/composer-config-plugin/zipball/4f8d841d57a0015af48bf6451ad3342aa56b9559",
-                "reference": "4f8d841d57a0015af48bf6451ad3342aa56b9559",
+                "url": "https://api.github.com/repos/hiqdev/composer-config-plugin/zipball/820a9e6804f8e955597d81eced85dd8d15577000",
+                "reference": "820a9e6804f8e955597d81eced85dd8d15577000",
                 "shasum": ""
             },
             "require": {
@@ -188,7 +188,7 @@
                 "config",
                 "plugin"
             ],
-            "time": "2019-04-23T18:54:31+00:00"
+            "time": "2019-05-12T18:15:35+00:00"
         },
         {
             "name": "league/commonmark",
@@ -1661,28 +1661,25 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/log.git",
-                "reference": "29bb5daf6e7d70b68569d64528b6557cbfe1d88b"
+                "reference": "8e5245d2e4606a6d565e94c1d42bd1d1c1dd9990"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/log/zipball/29bb5daf6e7d70b68569d64528b6557cbfe1d88b",
-                "reference": "29bb5daf6e7d70b68569d64528b6557cbfe1d88b",
+                "url": "https://api.github.com/repos/yiisoft/log/zipball/8e5245d2e4606a6d565e94c1d42bd1d1c1dd9990",
+                "reference": "8e5245d2e4606a6d565e94c1d42bd1d1c1dd9990",
                 "shasum": ""
             },
             "require": {
                 "psr/log": "^1.1",
-                "yiisoft/arrays": "^3.0@dev"
+                "yiisoft/arrays": "^3.0@dev",
+                "yiisoft/var-dumper": "^3.0@dev"
             },
             "provide": {
                 "psr/log-implementation": "1.0.0"
             },
             "require-dev": {
                 "hiqdev/composer-config-plugin": "^1.0@dev",
-                "phpunit/phpunit": "^7.3",
-                "yiisoft/cache": "^3.0@dev",
-                "yiisoft/di": "^3.0@dev",
-                "yiisoft/yii-core": "^3.0@dev",
-                "yiisoft/yii-web": "^3.0@dev"
+                "phpunit/phpunit": "^7.3"
             },
             "suggest": {
                 "yiisoft/log-target-db": "version ^3.0 for saving logs to the database",
@@ -1768,7 +1765,7 @@
                 "logger",
                 "yii"
             ],
-            "time": "2019-05-05T14:49:56+00:00"
+            "time": "2019-05-11T16:19:07+00:00"
         },
         {
             "name": "yiisoft/log-target-file",
@@ -1776,12 +1773,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/log-target-file.git",
-                "reference": "3509b369bdf44795267690a2a417a06ef58f8579"
+                "reference": "d78fe519e54774fcc4ded865ce466288b6f1d6d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/log-target-file/zipball/3509b369bdf44795267690a2a417a06ef58f8579",
-                "reference": "3509b369bdf44795267690a2a417a06ef58f8579",
+                "url": "https://api.github.com/repos/yiisoft/log-target-file/zipball/d78fe519e54774fcc4ded865ce466288b6f1d6d5",
+                "reference": "d78fe519e54774fcc4ded865ce466288b6f1d6d5",
                 "shasum": ""
             },
             "require": {
@@ -1792,13 +1789,15 @@
                 "phpunit/phpunit": "^7.3",
                 "yiisoft/cache": "^3.0@dev",
                 "yiisoft/di": "^3.0@dev",
-                "yiisoft/yii-core": "^3.0@dev",
-                "yiisoft/yii-web": "^3.0@dev"
+                "yiisoft/yii-core": "^3.0@dev"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "3.0.x-dev"
+                },
+                "config-plugin": {
+                    "common": "config/common.php"
                 }
             },
             "autoload": {
@@ -1865,7 +1864,7 @@
                 "logger",
                 "yii"
             ],
-            "time": "2019-04-25T14:49:10+00:00"
+            "time": "2019-05-13T13:51:15+00:00"
         },
         {
             "name": "yiisoft/rbac",
@@ -2020,23 +2019,76 @@
             "time": "2019-05-07T15:34:42+00:00"
         },
         {
+            "name": "yiisoft/var-dumper",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/var-dumper.git",
+                "reference": "c58f3de2f8186e7ffcd178e5bc819039f5ebd781"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/var-dumper/zipball/c58f3de2f8186e7ffcd178e5bc819039f5ebd781",
+                "reference": "c58f3de2f8186e7ffcd178e5bc819039f5ebd781",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/arrays": "^3.0@dev"
+            },
+            "require-dev": {
+                "hiqdev/composer-config-plugin": "^1.0@dev",
+                "phpunit/phpunit": "^7.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Yiisoft\\VarDumper\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Qiang Xue",
+                    "email": "qiang.xue@gmail.com",
+                    "homepage": "http://www.yiiframework.com/",
+                    "role": "Founder and former project lead"
+                }
+            ],
+            "description": "Yii - VarDumper helper",
+            "homepage": "http://www.yiiframework.com/",
+            "keywords": [
+                "framework",
+                "helper",
+                "var-dumper",
+                "yii"
+            ],
+            "time": "2019-05-06T09:43:25+00:00"
+        },
+        {
             "name": "yiisoft/view",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/view.git",
-                "reference": "206f58f0c33a7a861984e4c67de470529b19ebb5"
+                "reference": "d33d1bcf0d9621a497c807256a3465838e1eac06"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/view/zipball/206f58f0c33a7a861984e4c67de470529b19ebb5",
-                "reference": "206f58f0c33a7a861984e4c67de470529b19ebb5",
+                "url": "https://api.github.com/repos/yiisoft/view/zipball/d33d1bcf0d9621a497c807256a3465838e1eac06",
+                "reference": "d33d1bcf0d9621a497c807256a3465838e1eac06",
                 "shasum": ""
             },
             "require": {
                 "yiisoft/arrays": "^3.0@dev",
-                "yiisoft/yii-core": "^3.0@dev",
-                "yiisoft/yii-web": "^3.0@dev"
+                "yiisoft/yii-core": "^3.0@dev"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^2.2",
@@ -2123,7 +2175,7 @@
                 "view",
                 "yii"
             ],
-            "time": "2019-04-30T12:14:28+00:00"
+            "time": "2019-05-11T14:22:11+00:00"
         },
         {
             "name": "yiisoft/yii-bootstrap4",
@@ -3026,71 +3078,17 @@
             "time": "2016-04-07T12:29:16+00:00"
         },
         {
-            "name": "yiisoft/var-dumper",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/yiisoft/var-dumper.git",
-                "reference": "c58f3de2f8186e7ffcd178e5bc819039f5ebd781"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/var-dumper/zipball/c58f3de2f8186e7ffcd178e5bc819039f5ebd781",
-                "reference": "c58f3de2f8186e7ffcd178e5bc819039f5ebd781",
-                "shasum": ""
-            },
-            "require": {
-                "yiisoft/arrays": "^3.0@dev"
-            },
-            "require-dev": {
-                "hiqdev/composer-config-plugin": "^1.0@dev",
-                "phpunit/phpunit": "^7.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Yiisoft\\VarDumper\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Qiang Xue",
-                    "email": "qiang.xue@gmail.com",
-                    "homepage": "http://www.yiiframework.com/",
-                    "role": "Founder and former project lead"
-                }
-            ],
-            "description": "Yii - VarDumper helper",
-            "homepage": "http://www.yiiframework.com/",
-            "keywords": [
-                "framework",
-                "helper",
-                "var-dumper",
-                "yii"
-            ],
-            "time": "2019-05-06T09:43:25+00:00"
-        },
-        {
             "name": "yiisoft/yii-debug",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii-debug.git",
-                "reference": "0f9d7662449ce471b6838b8276ce0c0240b29bdc"
+                "reference": "17aaa2a04be626e3ed6d6d87c4a4b9c26a5dd8c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii-debug/zipball/0f9d7662449ce471b6838b8276ce0c0240b29bdc",
-                "reference": "0f9d7662449ce471b6838b8276ce0c0240b29bdc",
+                "url": "https://api.github.com/repos/yiisoft/yii-debug/zipball/17aaa2a04be626e3ed6d6d87c4a4b9c26a5dd8c0",
+                "reference": "17aaa2a04be626e3ed6d6d87c4a4b9c26a5dd8c0",
                 "shasum": ""
             },
             "require": {
@@ -3142,7 +3140,7 @@
                 "debugger",
                 "yii"
             ],
-            "time": "2019-05-07T15:51:59+00:00"
+            "time": "2019-05-11T19:12:46+00:00"
         },
         {
             "name": "yiisoft/yii-gii",

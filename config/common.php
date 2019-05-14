@@ -10,6 +10,12 @@ return [
             '@runtime' => dirname(__DIR__) . '/runtime',
         ]
     ],
+    'cache' => [
+        '__class' => \Yiisoft\Cache\Cache::class,
+        '__construct()' => [
+               '__class' => Yiisoft\Cache\ArrayCache::class,
+           ],
+    ],
     'db' => [
         '__class'   => \Yiisoft\Db\Connection::class,
         'dsn'       => 'sqlite:dbname=' . $params['db.name']
@@ -18,14 +24,26 @@ return [
         'username'  => $params['db.user'],
         'password'  => $params['db.password'],
     ],
-    'cache' => [
-        '__class' => \Yiisoft\Cache\Cache::class,
+    'file-rotator' => [
+        '__class' => \Yiisoft\Log\FileRotator::class,
         '__construct()' => [
-               '__class' => Yiisoft\Cache\ArrayCache::class,
-           ],
+            10
+        ]
     ],
+    'logger' => static function (\yii\di\Container $container) {
+        /** @var \yii\base\Aliases $aliases */
+        $aliases = $container->get('aliases');
+
+        $fileTarget = new Yiisoft\Log\FileTarget($aliases->get('@runtime/logs/app.log'),  $container->get('file-rotator'));
+
+        return new \Yiisoft\Log\Logger([
+            'file' => $fileTarget->setCategories(['application']),
+        ]);
+    },
     'user' => [
         '__class' => yii\web\User::class,
         'identityClass' => \app\models\User::class,
     ],
+
+
 ];
